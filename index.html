@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- meta settings -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="format-detection" content="telephone=no">
+
+<!-- meta description -->
+<meta name="description" content="Functions from L">
+
+<!-- title -->
+<title>Functions from L</title>
+
+<!-- ogp -->
+<meta property="og:locale" content="ja_JP">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Functions from L">
+<meta property="og:url" content="https://functions.lne.st">
+<meta property="og:image" content="https://functions.lne.st/img/ogp.png">
+<meta property="og:site_name" content="Functions from L">
+<meta property="og:description" content="Functions from L">
+<meta name="twitter:card" content="summary">
+
+<!-- favicon / apple-touch-icon -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+
+<!-- styles -->
+<link rel="stylesheet" href="/css/reset.css">
+<link rel="stylesheet" href="/css/plugin.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/module.css">
+
+<!-- fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="l-wrapper">
+
+    <header class="l-header">
+        <div class="l-header__container">
+            <h1 class="l-header__logo">
+                <a href="/" class="l-header__logo-link">
+                    <img src="/img/common/logo_functions-from-l.png" alt="Functions from L">
+                </a>
+            </h1>
+
+            <button type="button" class="l-header-menu-button js-menu-trigger">
+                <span class="l-header-menu-button__lines">
+                    <span class="l-header-menu-button__line l-header-menu-button__line--top"></span>
+                    <span class="l-header-menu-button__line l-header-menu-button__line--bottom"></span>
+                </span>
+                <span class="l-header-menu-button__txt l-header-menu-button__txt--open">MENU</span>
+                <span class="l-header-menu-button__txt l-header-menu-button__txt--close">CLOSE</span>
+            </button>
+            <!-- [/l-header-menu-button] -->
+
+        </div>
+    </header>
+    <!-- [/l-header] -->
+
+    <nav class="l-global-nav js-menu">
+        <div class="l-global-nav__container">
+            <ul class="l-global-nav__list">
+                <li class="l-global-nav__item is-current">
+                    <a href="/" class="l-global-nav__link">
+                        <span class="l-global-nav__txt-en">Top</span>
+                        <span class="l-global-nav__txt-ja">トップ</span>
+                    </a>
+                </li>
+                <li class="l-global-nav__item">
+                    <a href="/products/partyonslack/" class="l-global-nav__link">
+                        <span class="l-global-nav__txt-en">Party on Slack</span>
+                        <span class="l-global-nav__txt-ja">SlackでChatGPTと会話ができるアプリ</span>
+                    </a>
+                </li>
+                <li class="l-global-nav__item">
+                    <a href="/products/timeline/" class="l-global-nav__link">
+                        <span class="l-global-nav__txt-en">TimeLine</span>
+                        <span class="l-global-nav__txt-ja">チーム全体の動きを“小耳にはさめる”Slackアプリ</span>
+                    </a>
+                </li>
+                <li class="l-global-nav__item">
+                    <a href="/products/tasukaru/" class="l-global-nav__link">
+                        <span class="l-global-nav__txt-en">TASUKARU -TaskAll-</span>
+                        <span class="l-global-nav__txt-ja">Slack上でタスク管理を完結できるアプリ</span>
+                    </a>
+                </li>
+                <li class="l-global-nav__item">
+                    <a href="/products/oyasumibot/" class="l-global-nav__link">
+                        <span class="l-global-nav__txt-en">OYASUMI bot</span>
+                        <span class="l-global-nav__txt-ja">通知なしで休暇を安心して過ごすためのSlackアプリ</span>
+                    </a>
+                </li>
+                <li class="l-global-nav__item">
+                    <a href="/products/tips/" class="l-global-nav__link">
+                        <span class="l-global-nav__txt-en">TIPS</span>
+                        <span class="l-global-nav__txt-ja">情報浸透のための高機能リマインダーSlackアプリ</span>
+                    </a>
+                </li>
+                <li class="l-global-nav__item">
+                    <a href="/products/yokoku/" class="l-global-nav__link">
+                        <span class="l-global-nav__txt-en">YOKOKU</span>
+                        <span class="l-global-nav__txt-ja">Slack上で提案機会を逃さないための“予告”アプリ</span>
+                    </a>
+                </li>
+                <li class="l-global-nav__item">
+                    <a href="/products/salesforceconnector/" class="l-global-nav__link">
+                        <span class="l-global-nav__txt-en">Salesforce Connector</span>
+                        <span class="l-global-nav__txt-ja">Slack上でSalesforceの活動報告を完結できるアプリ</span>
+                    </a>
+                </li>
+                <li class="l-global-nav__item">
+                    <a href="/products/deepltranslator/" class="l-global-nav__link">
+                        <span class="l-global-nav__txt-en">DeepL Translator</span>
+                        <span class="l-global-nav__txt-ja">投稿したテキストをSlack上で翻訳できるアプリ</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- [/l-global-nav] -->
+
+    <div class="l-contents">
+
+        <div class="c-kv-1">
+
+            <div class="splide c-slider-1 js-slider" aria-label="カルーセル">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <a href="/products/partyonslack/" class="c-slider-1__link">
+                                <div class="c-slider-1__img">
+                                    <img src="/img/top/img_slide_01.jpg" alt="Party on Slack" class="sp-hide">
+                                    <img src="/img/top/img_slide_01.jpg" alt="Party on Slack" class="pc-hide">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="/products/timeline/" class="c-slider-1__link">
+                                <div class="c-slider-1__img">
+                                    <img src="/img/top/img_slide_02.jpg" alt="Time Line" class="sp-hide">
+                                    <img src="/img/top/img_slide_02.jpg" alt="Time Line" class="pc-hide">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="/products/tasukaru/" class="c-slider-1__link">
+                                <div class="c-slider-1__img">
+                                    <img src="/img/top/img_slide_03.jpg" alt="TASUKARU -TaskAll-" class="sp-hide">
+                                    <img src="/img/top/img_slide_03.jpg" alt="TASUKARU -TaskAll-" class="pc-hide">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- [/c-slider-1] -->
+
+        </div>
+        <!-- [/c-kv-1] -->
+
+        <div class="c-block-1">
+            <div class="c-block-1__inner">
+                <!-- <a href="/news/20230401.html" class="c-block-1__link">
+                    <span class="c-block-1__link-txt c-block-1__link-txt--date">2023.04.01</span>
+                    <span class="c-block-1__link-txt c-block-1__link-txt--news">ウェブサイトを公開しました</span>
+                </a> -->
+                <div class="c-block-1__link">
+                    <span class="c-block-1__link-txt c-block-1__link-txt--date">2023.04.01</span>
+                    <span class="c-block-1__link-txt c-block-1__link-txt--news">ウェブサイトを公開しました</span>
+                </div>
+                <!-- <a href="/news/" class="c-block-1__link">
+                    <span class="c-block-1__link-txt c-block-1__link-txt--more">一覧を見る</span>
+                    <span class="c-block-1__arr-outer">
+                        <span class="c-block-1__arr">
+                            <img src="/img/common/icon_arrow.svg" alt="→">
+                        </span>
+                    </span>
+                </a> -->
+            </div>
+        </div>
+        <!-- [/c-block-1] -->
+
+        <section class="c-section-1 c-section-1--about">
+            <div class="c-section-1__container">
+                <div class="c-section-1__head">
+                    <h2 class="c-ttl-1">
+                        <span class="c-ttl-1__en">About</span>
+                        <span class="c-ttl-1__ja">Functions from Lとは</span>
+                    </h2>
+                    <!-- [/c-ttl-1] -->
+                </div>
+                <div class="c-section-1__body">
+                    <div class="c-section-1__txt">
+                        <h3 class="c-ttl-2">
+                            リバネスナレッジが開発する<br>
+                            デジタル化推進のための<br>
+                            アプリケーションブランド
+                        </h3>
+                        <p class="c-txt-1">
+                            Functions from Lは、リバネスナレッジがリバネスのDXの過程で培ったノウハウを<br>
+                            個々のアプリケーションとして提供するプラットフォームです。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- [/c-section-1] -->
+
+        <section class="c-section-1 c-section-1--products">
+            <div class="c-section-1__container">
+                <div class="c-section-1__head">
+
+                    <h2 class="c-ttl-1">
+                        <span class="c-ttl-1__en">Products</span>
+                        <span class="c-ttl-1__ja">現在リリースされているSlackアプリケーション</span>
+                    </h2>
+                    <!-- [/c-ttl-1] -->
+
+                </div>
+                <div class="c-section-1__body">
+                    <div class="c-section-1__card">
+
+                        <ul class="c-card-1">
+                            <li class="c-card-1__item">
+                                <a href="/products/partyonslack/" class="c-card-1__link">
+                                    <div class="c-card-1__img-outer">
+                                        <div class="c-card-1__img">
+                                            <img src="/img/top/img_party_on_slack.webp" alt="Party on Slack">
+                                        </div>
+                                    </div>
+                                    <h3 class="c-card-1__ttl">Party on Slack</h3>
+                                </a>
+                            </li>
+                            <li class="c-card-1__item">
+                                <a href="/products/timeline/" class="c-card-1__link">
+                                    <div class="c-card-1__img-outer">
+                                        <div class="c-card-1__img">
+                                            <img src="/img/top/img_time_line.webp" alt="TimeLine">
+                                        </div>
+                                    </div>
+                                    <h3 class="c-card-1__ttl">TimeLine</h3>
+                                </a>
+                            </li>
+                            <li class="c-card-1__item">
+                                <a href="/products/tasukaru/" class="c-card-1__link">
+                                    <div class="c-card-1__img-outer">
+                                        <div class="c-card-1__img">
+                                            <img src="/img/top/img_tasukaru.webp" alt="TASUKARU -TaskAll-">
+                                        </div>
+                                    </div>
+                                    <h3 class="c-card-1__ttl">TASUKARU <br class="pc-hide">-TaskAll-</h3>
+                                </a>
+                            </li>
+                            <li class="c-card-1__item">
+                                <a href="/products/oyasumibot/" class="c-card-1__link">
+                                    <div class="c-card-1__img-outer">
+                                        <div class="c-card-1__img">
+                                            <img src="/img/top/img_oyasumi_bot.webp" alt="OYASUMI bot">
+                                        </div>
+                                    </div>
+                                    <h3 class="c-card-1__ttl">OYASUMI bot</h3>
+                                </a>
+                            </li>
+                            <li class="c-card-1__item">
+                                <a href="/products/tips/" class="c-card-1__link">
+                                    <div class="c-card-1__img-outer">
+                                        <div class="c-card-1__img">
+                                            <img src="/img/top/img_tips.webp" alt="TIPS">
+                                        </div>
+                                    </div>
+                                    <h3 class="c-card-1__ttl">TIPS</h3>
+                                </a>
+                            </li>
+                            <li class="c-card-1__item">
+                                <a href="/products/yokoku/" class="c-card-1__link">
+                                    <div class="c-card-1__img-outer">
+                                        <div class="c-card-1__img">
+                                            <img src="/img/top/img_yokoku.webp" alt="YOKOKU">
+                                        </div>
+                                    </div>
+                                    <h3 class="c-card-1__ttl">YOKOKU</h3>
+                                </a>
+                            </li>
+                            <li class="c-card-1__item">
+                                <a href="/products/salesforceconnector/" class="c-card-1__link">
+                                    <div class="c-card-1__img-outer">
+                                        <div class="c-card-1__img">
+                                            <img src="/img/top/img_salesforce_connector.webp" alt="Salesforce Connector">
+                                        </div>
+                                    </div>
+                                    <h3 class="c-card-1__ttl">Salesforce Connector</h3>
+                                </a>
+                            </li>
+                            <li class="c-card-1__item">
+                                <a href="/products/deepltranslator/" class="c-card-1__link">
+                                    <div class="c-card-1__img-outer">
+                                        <div class="c-card-1__img">
+                                            <img src="/img/top/img_deepl_translator.webp" alt="DeepL Translator">
+                                        </div>
+                                    </div>
+                                    <h3 class="c-card-1__ttl">DeepL Translator</h3>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- [/c-card-1] -->
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- [/c-section-1] -->
+
+        <section class="c-section-1 c-section-1--developers">
+            <div class="c-section-1__container">
+                <div class="c-section-1__head">
+
+                    <h2 class="c-ttl-1">
+                        <span class="c-ttl-1__en c-ttl-1__en--s">From Developers</span>
+                        <span class="c-ttl-1__ja">開発者より</span>
+                    </h2>
+                    <!-- [/c-ttl-1] -->
+
+                </div>
+                <div class="c-section-1__body">
+                    <div class="c-section-1__cassette">
+
+                        <section class="c-cassette-1">
+                            <div class="c-cassette-1__head">
+
+                                <h3 class="c-ttl-2">アプリ開発やDXに関する情報を<br>noteで発信しています</h3>
+                                <!-- [/c-ttl-2] -->
+
+                            </div>
+                            <div class="c-cassette-1__txt">
+
+                                <p class="c-txt-1">
+                                    リバネスのCIOとして20年間に渡る、業務効率化についての思考と開発をまとめたログです。<br>
+                                    SalesforceやSlack、Pardot、を中心にリバネスやリバネスナレッジでの様々なツールの組織への導入方法やツール同士の連携方法を日々思考・実験しています。
+                                </p>
+
+                            </div>
+                            <div class="c-cassette-1__img-outer">
+                                <div class="c-cassette-1__img">
+                                    <img src="/img/top/img_note.jpg" alt="note" class="sp-hide">
+                                    <img src="/img/top/sp/img_note.jpg" alt="note" class="pc-hide">
+                                </div>
+                                <div class="c-cassette-1__caption">
+
+                                    <p class="c-txt-1 c-txt-1--s">
+                                        <a href="https://note.com/geeorgey" target="_blank" class="c-txt-1__link">https://note.com/geeorge<span class="link-blank">y</span></a>
+                                    </p>
+                                    <!-- [/c-txt-1] -->
+
+                                </div>
+                            </div>
+                            <div class="c-cassette-1__btn">
+
+                                <a href="https://note.com/geeorgey" target="_blank" class="c-btn-2">
+                                    <div class="c-btn-2__inner">
+                                        <span class="c-btn-2__txt">noteを読む</span>
+                                        <span class="c-btn-2__arr-outer">
+                                            <span class="c-btn-2__arr">
+                                                <img src="/img/common/icon_arrow.svg" alt="→">
+                                            </span>
+                                        </span>
+                                    </div>
+                                </a>
+                                <!-- [/c-btn-2] -->
+
+                            </div>
+                        </section>
+                        <!-- [/c-cassette-1] -->
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- [/c-section-1] -->
+
+    </div>
+    <!-- [/l-contents] -->
+
+    <div class="l-footer-pagetop">
+        <a href="#"  class="l-footer-pagetop__link">
+            <span class="l-footer-pagetop__txt">TOP</span>
+        </a>
+    </div>
+    <!-- [/l-footer-pagetop] -->
+
+    <footer class="l-footer">
+        <div class="l-footer__container">
+            <p class="l-footer__logo">
+                <a href="/" class="l-footer__logo-link">
+                    <img src="/img/common/logo_functions-from-l.png" alt="Functions from L">
+                </a>
+            </p>
+
+            <nav class="l-footer-nav">
+                <ul class="l-footer-nav__list">
+                    <li class="l-footer-nav__item">
+                        <a href="https://k.lne.st/" target="_blank" class="l-footer-nav__link">運営会社につい<span class="link-blank">て</span></a>
+                    </li>
+                    <li class="l-footer-nav__item">
+                        <a href="/terms/" class="l-footer-nav__link">利用規約</a>
+                    </li>
+                    <li class="l-footer-nav__item">
+                        <a href="https://k.lne.st/privacy/" target="_blank" class="l-footer-nav__link">プライバシーポリシ<span class="link-blank">ー</span></a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- [/l-footer-nav] -->
+
+            <div class="l-footer-lower">
+                <div class="l-footer-lower__copyright">
+                    <small class="l-footer-lower__copyright-txt">&copy; Functions from L - serviced by</small>
+                </div>
+                <p class="l-footer-lower__logo">
+                    <a href="https://k.lne.st/" target="_blank" class="l-footer-lower__logo-link">
+                        <img src="/img/common/logo_leave-a-nest.png" alt="Leave a Nest KNOWLEDGE">
+                    </a>
+                </p>
+            </div>
+            <!-- [/l-footer-lower] -->
+
+        </div>
+    </footer>
+    <!-- [/l-footer] -->
+
+</div>
+<!-- [/l-wrapper] -->
+
+<!-- scripts -->
+<script src="/js/lib/lib.js"></script>
+<script src="/js/common.js"></script>
+</body>
+</html>
