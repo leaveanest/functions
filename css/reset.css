@@ -103,3 +103,31 @@ textarea {
     overflow: auto;
     resize: none;
 }
+
+ul.c-list-4　li.none-marker {
+    display: block;
+    list-style-type: none;
+}
+
+.none-marker li {
+    display: block;
+    list-style-type: none;
+}
+li.none-marker {
+      display: block;
+      list-style-type: none;
+}
+
+ul.c-list-4　li.none-marker {
+    display: block;
+    list-style: none;
+}
+
+  .none-marker li {
+    display: block;
+    list-style: none;
+}
+li.none-marker {
+      display: block;
+      list-style: none;
+}

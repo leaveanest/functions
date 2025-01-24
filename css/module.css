@@ -1773,6 +1773,11 @@
     margin-right: 8px;
     margin-top: 7px;
 }
+.c-list-4 > li.none-marker::before {
+    width: 20px;
+    background-color: #FFF;
+    margin-bottom: 0px;
+}
 @media screen and (max-width: 750px) {
     .c-list-4 > li::before {
         width: 2.1333333333vw;

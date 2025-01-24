@@ -238,11 +238,19 @@
                             </div>
                             <div class="c-cassette-3__txt">
                                 <ul class="c-list-4">
-                                    <li>SlackのUIでChatGPTと会話ができます。</li>
-                                    <li>OpenAI APIを利用するので、入力データを学習データとして取り込まれません。</li>
-                                    <li>PDF/Wordファイルを要約することで資料を読み込む時間を短縮できます。</li>
+                                    <li class="mgb-pc--20">SlackのUIでChatGPTと会話ができます。</li>
+                                    <li class="none-marker mgb-pc--20">「Party on Slack」は、SlackのワークスペースにAI機能を統合させるアプリケーションです。</li>
+                                    <li class="none-marker">OpenAIのChatGPT APIを利用し、Slack上でChatGPTなどの生成AIと直接自然なチャットが可能になります。</li>
+                                    <li class="none-marker mgb-pc--35">このアプリを利用すると、タスクの自動化や、メッセージの要約、情報検索など、正確でスピーディーの高い回答を実現でき、アイデア出しや資料の要約など業務効率の向上が期待できます。</li>
+                                    <li class="mgb-pc--20">OpenAI APIを利用するので、入力データを学習データとして取り込まれません。</li> 
+                                    <li class="none-marker mgb-pc--20">エンベッディング機能により必要に応じて自社情報をPineconeに格納し、Slack上のChatGPTでその情報が活用できます。</li>
+                                    <li class="none-marker mgb-pc--20">多様なAIモデルの利用：OpenAIのChatGPTに加え、AnthropicのClaudeやStability AIのStable Diffusion、Azure OpenAI API、AWS Bedrock API、Groq API, Nvidia API、PLaMo API など、複数の生成AIモデルに対応しています。</li>
+                                    <li class="none-marker mgb-pc--35">(Difyで作成したAI BOTもAPIを登録することで利用可能になります)</li>
+                                    <li class="mgb-pc--20">PDF/Wordファイルを要約することで資料を読み込む時間を短縮できます。</li>
+                                    <li class="none-marker mgb-pc--20">PDFやWordファイルをアップロードし、AIが内容を要約することで、資料の理解を迅速化します。</li>
+                                    <li class="none-marker">また音声ファイルを文字起こしして要約することもできます。</li>
                                 </ul>
-                                <!-- [/c-list-4] -->
+                                    <!-- [/c-list-4] -->
 
                             </div>
                         </div>
@@ -259,10 +267,44 @@
                             </div>
 
                             <div class="c-cassette-3__txt">
+                                <h3 class="c-ttl-5">Slackにきく</h3>
+                                <p class="c-txt-1">・Slack内のメッセージを検索して、回答をLLM処理して投稿します。</p>
+                                <h3 class="c-ttl-5"></h3>
+                                <p class="c-txt-1"></p>
                                 <h3 class="c-ttl-5">要約機能</h3>
-                                <p class="c-txt-1">PDFやWordファイル、SlackのスレッドをAIが要約します。</p>
+                                <p class="c-txt-1">・PDFやWordファイル、SlackのスレッドをAIが要約します。</p>
+                                <p class="c-txt-1">PDFやWordファイル、ドキュメントをアップロードしたり、貼り付けた長文テキストの要約、また音声ファイルを文字起こしして要約します。</p>
+                                
+                                <dl class="c-list-4">
+                                <dt class="c-txt-1 fw-bold">現在の対応ファイル一覧</dt>
+                                <dd class="c-txt-1">動画ファイル：mp4、mpeg、webm</dd>
+                                <dd>音声ファイル：mp3、m4a、mpga、wav</dd>
+                                <dd>文書ファイル：pdf、docx、txt、markdown、html</dd>
+                                <dd>表計算ファイル：csv、xlsx</dd>
+                                <dd>プレゼンテーションファイル： pptx</dd>
+                                <dd>データファイル： json、xml、yaml</dd>
+                                </dl>
+                                
+                                <dl class="c-list-4 ">
+                                <dt class="mgb-pc--10 c-txt-1 fw-bold">次のようなデータについてもAI処理できます：</dt>
+                                <dd class="mgb-pc--10">・Googleスプレッドシートのデータを活用</dd>
+                                <dd class="mgb-pc--10">・インターネット検索の情報を取り込み</dd>
+                                <dd class="mgb-pc--10"></dd>・Slackの会話内容を基に分析</dd>
+                                </dl>
+                                
                                 <h3 class="c-ttl-5">エンベッティング機能</h3>
-                                <p class="c-txt-1">自社情報をPinecone に格納することで、ChatGPTが自社の情報も活用してくれます。</p>
+                                <p class="c-txt-1">・自社情報をPinecone に格納することで、ChatGPTが自社の情報も活用してくれます。</p>
+                                <h3 class="c-ttl-5">音声を文字起こし</h3>
+                                <p class="c-txt-1">・Slackで行われた会議や音声データを文字化し、議事録として利用できます。
+                                </p>
+                                <h3 class="c-ttl-5">画像生成機能</h3>
+                                <p class="c-txt-1">・dall-e, Stable Diffusionが利用可能で、そこから画像を生成することができます。</p>
+                                <h3 class="c-ttl-5">RSSコンシェルジュ</h3>
+                                <p class="c-txt-1">・RSS feedのURLを登録すると、定期的に新規記事をLLM処理し、チャンネルに投稿します。</p>
+                                <h3 class="c-ttl-5">スケジュール調整</h3>
+                                <p class="c-txt-1">・Googleカレンダーを調べて時間調整をすることが出来ます。調整したい人と調整する期間を選択することでスケジュール調整ができます。</p>
+                                <h3 class="c-ttl-5">カスタマイズ可能なキャラクター</h3>
+                                <p class="c-txt-1">・AIの口調や個性を設定して、団体に合わせた実用的な返答を構築できます。</p>
                             </div>
 
                         </div>
