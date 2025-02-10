@@ -84,6 +84,13 @@ picture img {
     height: auto;
 }
 
+p.tl-img,.tl-img img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+
 /* ---------------------------------------------
 *   <hr> tag as anchor target
 --------------------------------------------- */
