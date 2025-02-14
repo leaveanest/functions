@@ -47,26 +47,30 @@ body {
 }
 
 .pricing_tb tbody{
-    padding: 13px;
+    padding: px;
 }
+
 
 .table-second-center td:nth-child(n+2){
     text-align: center;
     color: #635FD9;
     font-size: 11px;
+    padding: 11px;
   }
+
 .pricing_tb_th th{
     background-color:#f3f3fd;
     text-align: center;
     color: #635FD9;
-    font-size: 12px;
-    padding: 13px;
+    font-size: 11px;
+    padding: 11px;
     border: 1px solid #ccc;
     font-weight: bold;
+    width: 100%;
 }
 .table-first-center td:first-child{
     text-align: left;
-    font-size: 12px;
+    font-size: 10px;
     padding: 5px;
     
   }
@@ -113,28 +117,12 @@ a {
     text-decoration: none;
     outline: none;
 }
-.btn-install-timeline, .btn-install-partyonslack, .btn-install-tasukaru, .btn-install-oyasumibot, .btn-install-tips, .btn-install-yokoku, .btn-install-salesforceconnector, .btn-install-deepltranslator {
-    pointer-events: auto;
+.btn-install-timeline, .btn-install-partyonslack, .btn-install-tasukaru, .btn-install-oyasumibot, .btn-install-tips, .btn-install-yokoku, .btn-install-salesforceconnector, .btn-install-deepltranslator, .btn-k-contact-us { 
+    display: block; /* ブロック要素化 */
+    pointer-events: auto;; /* ポインターイベントを有効化 */
   }
   
-  .btn-install-timeline > div, 
-  .btn-install-timeline > span, 
-  .btn-install-partyonslack > div, 
-  .btn-install-partyonslack > span, 
-  .btn-install-tasukaru > div, 
-  .btn-install-tasukaru > span, 
-  .btn-install-oyasumibot > div, 
-  .btn-install-oyasumibot > span, 
-  .btn-install-tips > div, 
-  .btn-install-tips > span, 
-  .btn-install-yokoku > div, 
-  .btn-install-yokoku > span, 
-  .btn-install-salesforceconnector > div, 
-  .btn-install-salesforceconnector
-  .btn-install-deepltranslator > div, 
-  .btn-install-deepltranslator > span {
-    pointer-events: none;
-  }
+
 /* ---------------------------------------------
 *   <img> tag
 --------------------------------------------- */
