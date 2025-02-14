@@ -34,6 +34,42 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
+.pricing_tb {
+    border: 2px solid #ccc;
+    
+}
+.pricing_tb tr{
+    border: 1px solid #ccc;
+}
+
+.pricing_tb td{
+    border: 1px solid #ccc;
+}
+
+.pricing_tb tbody{
+    padding: 13px;
+}
+
+.table-second-center td:nth-child(n+2){
+    text-align: center;
+    color: #635FD9;
+    font-size: 11px;
+  }
+.pricing_tb_th th{
+    background-color:#f3f3fd;
+    text-align: center;
+    color: #635FD9;
+    font-size: 12px;
+    padding: 13px;
+    border: 1px solid #ccc;
+    font-weight: bold;
+}
+.table-first-center td:first-child{
+    text-align: left;
+    font-size: 12px;
+    padding: 5px;
+    
+  }
 
 span.emphasize-text{
     color: #67176f;
