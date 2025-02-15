@@ -119,9 +119,29 @@ a {
 }
 .btn-install-timeline, .btn-install-partyonslack, .btn-install-tasukaru, .btn-install-oyasumibot, .btn-install-tips, .btn-install-yokoku, .btn-install-salesforceconnector, .btn-install-deepltranslator, .btn-k-contact-us { 
     display: block; /* ブロック要素化 */
-    pointer-events: auto;; /* ポインターイベントを有効化 */
+    pointer-events: auto; /* ポインターイベントを有効化 */
   }
-  
+
+  .btn-contact-k > div, 
+  .btn-contact-k > div > span, 
+  .btn-install-timeline > div, 
+  .btn-install-timeline > div > span, 
+  .btn-install-partyonslack > div, 
+  .btn-install-partyonslack > div > span, 
+  .btn-install-tasukaru > div, 
+  .btn-install-tasukaru > div > span, 
+  .btn-install-oyasumibot > div, 
+  .btn-install-oyasumibot > div > span, 
+  .btn-install-tips > div, 
+  .btn-install-tips > div > span, 
+  .btn-install-yokoku > div, 
+  .btn-install-yokoku > div > span, 
+  .btn-install-salesforceconnector > div, 
+  .btn-install-salesforceconnector > div > span, 
+  .btn-install-deepltranslator > div, 
+  .btn-install-deepltranslator > div > span {
+  pointer-events: none;
+}
 
 /* ---------------------------------------------
 *   <img> tag
