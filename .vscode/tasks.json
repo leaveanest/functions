@@ -1,0 +1,49 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "画像圧縮: すべての画像",
+      "type": "shell",
+      "command": "find ${workspaceFolder}/img -type f -name '*.jpg' -o -name '*.jpeg' | xargs -I{} jpegoptim --strip-all --max=85 {} && find ${workspaceFolder}/img -type f -name '*.png' | xargs -I{} optipng -o5 {} && find ${workspaceFolder}/img -type f -name '*.gif' | xargs -I{} gifsicle -O3 -o {}.tmp {} && find ${workspaceFolder}/img -name '*.gif.tmp' | while read f; do mv \"$f\" \"${f%.tmp}\"; done",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "画像圧縮: JPEGのみ",
+      "type": "shell",
+      "command": "find ${workspaceFolder}/img -type f -name '*.jpg' -o -name '*.jpeg' | xargs -I{} echo '圧縮: {}' && find ${workspaceFolder}/img -type f -name '*.jpg' -o -name '*.jpeg' | xargs -I{} jpegoptim --strip-all --max=85 {}",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "画像圧縮: PNGのみ",
+      "type": "shell",
+      "command": "find ${workspaceFolder}/img -type f -name '*.png' | xargs -I{} echo '圧縮: {}' && find ${workspaceFolder}/img -type f -name '*.png' | xargs -I{} optipng -o5 {}",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "画像圧縮: 選択したディレクトリ",
+      "type": "shell",
+      "command": "read -p '圧縮するディレクトリを入力してください (例: img/top): ' dir && find ${workspaceFolder}/$dir -type f -name '*.jpg' -o -name '*.jpeg' | xargs -I{} jpegoptim --strip-all --max=85 {} && find ${workspaceFolder}/$dir -type f -name '*.png' | xargs -I{} optipng -o5 {}",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    }
+  ]
+}
