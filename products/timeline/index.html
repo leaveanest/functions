@@ -1,331 +1,353 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PHMWZX5P');</script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PHMWZX5P');</script>
     <!-- End Google Tag Manager -->
-<!-- meta settings -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<meta name="format-detection" content="telephone=no">
+    <!-- meta settings -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="format-detection" content="telephone=no">
 
-<!-- meta description -->
-<meta name="description" content="Slackでチーム全体の動きを“小耳にはさめる”Slackアプリ TimeLine for Slack。煩雑化したチャンネルの情報を集約・整理し情報を見える化できます。">
+    <!-- meta description -->
+    <meta name="description"
+        content="Slackでチーム全体の動きを“小耳にはさめる”Slackアプリ TimeLine for Slack。煩雑化したチャンネルの情報を集約・整理し情報を見える化できます。">
 
-<!-- title -->
-<title>Slackチャンネル整理の拡張アプリ - TimeLine for Slack</title>
+    <!-- title -->
+    <title>Slackチャンネル整理の拡張アプリ - TimeLine for Slack</title>
 
-<!-- ogp -->
-<meta property="og:locale" content="ja_JP">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Slackチャンネル整理の拡張アプリ - TimeLine for Slack">
-<meta property="og:url" content="https://functions.lne.st/products/timeline/">
-<meta property="og:image" content="https://functions.lne.st/img/ogp.png">
-<meta property="og:site_name" content="Functions from L">
-<meta property="og:description" content="Slackでチーム全体の動きを“小耳にはさめる”Slackアプリ TimeLine for Slack。煩雑化したチャンネルの情報を集約・整理し情報を見える化できます。">
-<meta name="twitter:card" content="summary">
+    <!-- ogp -->
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Slackチャンネル整理の拡張アプリ - TimeLine for Slack">
+    <meta property="og:url" content="https://functions.lne.st/products/timeline/">
+    <meta property="og:image" content="https://functions.lne.st/img/ogp.png">
+    <meta property="og:site_name" content="Functions from L">
+    <meta property="og:description"
+        content="Slackでチーム全体の動きを“小耳にはさめる”Slackアプリ TimeLine for Slack。煩雑化したチャンネルの情報を集約・整理し情報を見える化できます。">
+    <meta name="twitter:card" content="summary">
 
-<!-- favicon / apple-touch-icon -->
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" href="/icon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="manifest" href="/manifest.webmanifest">
+    <!-- favicon / apple-touch-icon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.webmanifest">
 
-<!-- styles -->
-<link rel="stylesheet" href="/css/reset.css">
-<link rel="stylesheet" href="/css/plugin.css">
-<link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="/css/module.css">
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/plugin.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/module.css">
 
-<!-- fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PHMWZX5P" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
-<!-- End Google Tag Manager (noscript) -->
-<div class="l-wrapper">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PHMWZX5P" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="l-wrapper">
 
-    <header class="l-header">
-        <div class="l-header__container">
-            <p class="l-header__logo">
-                <a href="/" class="l-header__logo-link">
-                    <img src="/img/common/logo_functions-from-l.png" alt="Functions from L">
-                </a>
-            </p>
+        <header class="l-header">
+            <div class="l-header__container">
+                <p class="l-header__logo">
+                    <a href="/" class="l-header__logo-link">
+                        <img src="/img/common/logo_functions-from-l.png" alt="Functions from L">
+                    </a>
+                </p>
 
-            <button type="button" class="l-header-menu-button js-menu-trigger">
-                <span class="l-header-menu-button__lines">
-                    <span class="l-header-menu-button__line l-header-menu-button__line--top"></span>
-                    <span class="l-header-menu-button__line l-header-menu-button__line--bottom"></span>
-                </span>
-                <span class="l-header-menu-button__txt l-header-menu-button__txt--open">MENU</span>
-                <span class="l-header-menu-button__txt l-header-menu-button__txt--close">CLOSE</span>
-            </button>
-            <!-- [/l-header-menu-button] -->
+                <button type="button" class="l-header-menu-button js-menu-trigger">
+                    <span class="l-header-menu-button__lines">
+                        <span class="l-header-menu-button__line l-header-menu-button__line--top"></span>
+                        <span class="l-header-menu-button__line l-header-menu-button__line--bottom"></span>
+                    </span>
+                    <span class="l-header-menu-button__txt l-header-menu-button__txt--open">MENU</span>
+                    <span class="l-header-menu-button__txt l-header-menu-button__txt--close">CLOSE</span>
+                </button>
+                <!-- [/l-header-menu-button] -->
 
-        </div>
-    </header>
-    <!-- [/l-header] -->
+            </div>
+        </header>
+        <!-- [/l-header] -->
 
-    <nav class="l-global-nav js-menu">
-        <div class="l-global-nav__container">
-            <ul class="l-global-nav__list">
-                <li class="l-global-nav__item">
-                    <a href="/" class="l-global-nav__link">
-                        <span class="l-global-nav__txt-en">Top</span>
-                        <span class="l-global-nav__txt-ja">トップ</span>
-                    </a>
-                </li>
-                <li class="l-global-nav__item">
-                    <a href="/products/partyonslack/" class="l-global-nav__link">
-                        <span class="l-global-nav__txt-en">Party on Slack</span>
-                        <span class="l-global-nav__txt-ja">SlackでChatGPTと会話ができるアプリ</span>
-                    </a>
-                </li>
-                <li class="l-global-nav__item is-current">
-                    <a href="/products/timeline/" class="l-global-nav__link">
-                        <span class="l-global-nav__txt-en">TimeLine</span>
-                        <span class="l-global-nav__txt-ja">チーム全体の動きを“小耳にはさめる”Slackアプリ</span>
-                    </a>
-                </li>
-                <li class="l-global-nav__item">
-                    <a href="/products/tasukaru/" class="l-global-nav__link">
-                        <span class="l-global-nav__txt-en">TASUKARU -TaskAll-</span>
-                        <span class="l-global-nav__txt-ja">Slack上でタスク管理を完結できるアプリ</span>
-                    </a>
-                </li>
-                <li class="l-global-nav__item">
-                    <a href="/products/oyasumibot/" class="l-global-nav__link">
-                        <span class="l-global-nav__txt-en">OYASUMI bot</span>
-                        <span class="l-global-nav__txt-ja">通知なしで休暇を安心して過ごすためのSlackアプリ</span>
-                    </a>
-                </li>
-                <li class="l-global-nav__item">
-                    <a href="/products/tips/" class="l-global-nav__link">
-                        <span class="l-global-nav__txt-en">TIPS</span>
-                        <span class="l-global-nav__txt-ja">情報浸透のための高機能リマインダーSlackアプリ</span>
-                    </a>
-                </li>
-                <li class="l-global-nav__item">
-                    <a href="/products/yokoku/" class="l-global-nav__link">
-                        <span class="l-global-nav__txt-en">YOKOKU</span>
-                        <span class="l-global-nav__txt-ja">Slack上で提案機会を逃さないための“予告”アプリ</span>
-                    </a>
-                </li>
-                <li class="l-global-nav__item">
-                    <a href="/products/salesforceconnector/" class="l-global-nav__link">
-                        <span class="l-global-nav__txt-en">Salesforce Connector</span>
-                        <span class="l-global-nav__txt-ja">Slack上でSalesforceの活動報告を完結できるアプリ</span>
-                    </a>
-                </li>
-                <li class="l-global-nav__item">
-                    <a href="/products/deepltranslator/" class="l-global-nav__link">
-                        <span class="l-global-nav__txt-en">DeepL Translator</span>
-                        <span class="l-global-nav__txt-ja">投稿したテキストをSlack上で翻訳できるアプリ</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <!-- [/l-global-nav] -->
+        <nav class="l-global-nav js-menu">
+            <div class="l-global-nav__container">
+                <ul class="l-global-nav__list">
+                    <li class="l-global-nav__item">
+                        <a href="/" class="l-global-nav__link">
+                            <span class="l-global-nav__txt-en">Top</span>
+                            <span class="l-global-nav__txt-ja">トップ</span>
+                        </a>
+                    </li>
+                    <li class="l-global-nav__item">
+                        <a href="/products/partyonslack/" class="l-global-nav__link">
+                            <span class="l-global-nav__txt-en">Party on Slack</span>
+                            <span class="l-global-nav__txt-ja">SlackでChatGPTと会話ができるアプリ</span>
+                        </a>
+                    </li>
+                    <li class="l-global-nav__item is-current">
+                        <a href="/products/timeline/" class="l-global-nav__link">
+                            <span class="l-global-nav__txt-en">TimeLine</span>
+                            <span class="l-global-nav__txt-ja">チーム全体の動きを“小耳にはさめる”Slackアプリ</span>
+                        </a>
+                    </li>
+                    <li class="l-global-nav__item">
+                        <a href="/products/oyasumibot/" class="l-global-nav__link">
+                            <span class="l-global-nav__txt-en">OYASUMI bot</span>
+                            <span class="l-global-nav__txt-ja">通知なしで休暇を安心して過ごすためのSlackアプリ</span>
+                        </a>
+                    </li>
+                    <li class="l-global-nav__item">
+                        <a href="/products/tips/" class="l-global-nav__link">
+                            <span class="l-global-nav__txt-en">TIPS</span>
+                            <span class="l-global-nav__txt-ja">情報浸透のための高機能リマインダーSlackアプリ</span>
+                        </a>
+                    </li>
+                    <li class="l-global-nav__item">
+                        <a href="/products/yokoku/" class="l-global-nav__link">
+                            <span class="l-global-nav__txt-en">YOKOKU</span>
+                            <span class="l-global-nav__txt-ja">Slack上で提案機会を逃さないための“予告”アプリ</span>
+                        </a>
+                    </li>
+                    <li class="l-global-nav__item">
+                        <a href="/products/salesforceconnector/" class="l-global-nav__link">
+                            <span class="l-global-nav__txt-en">Salesforce Connector</span>
+                            <span class="l-global-nav__txt-ja">Slack上でSalesforceの活動報告を完結できるアプリ</span>
+                        </a>
+                    </li>
+                    <li class="l-global-nav__item">
+                        <a href="/products/deepltranslator/" class="l-global-nav__link">
+                            <span class="l-global-nav__txt-en">DeepL Translator</span>
+                            <span class="l-global-nav__txt-ja">投稿したテキストをSlack上で翻訳できるアプリ</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- [/l-global-nav] -->
 
-    <div class="l-contents">
+        <div class="l-contents">
 
-        <div class="l-breadcrumb sp-hide">
-            <ul class="l-breadcrumb__list">
-                <li class="l-breadcrumb__item">
-                    <a href="/" class="l-breadcrumb__txt">Top</a>
-                </li>
-                <!-- <li class="l-breadcrumb__item">
+            <div class="l-breadcrumb sp-hide">
+                <ul class="l-breadcrumb__list">
+                    <li class="l-breadcrumb__item">
+                        <a href="/" class="l-breadcrumb__txt">Top</a>
+                    </li>
+                    <!-- <li class="l-breadcrumb__item">
                     <a href="/products/" class="l-breadcrumb__txt">Products</a>
                 </li> -->
-                <li class="l-breadcrumb__item">
-                    <span class="l-breadcrumb__txt">TimeLine</span>
-                </li>
-            </ul>
-        </div>
-        <!-- [/l-breadcrumb] -->
+                    <li class="l-breadcrumb__item">
+                        <span class="l-breadcrumb__txt">TimeLine</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- [/l-breadcrumb] -->
 
-        <section class="c-section-2">
+            <section class="c-section-2">
 
-            <div class="c-kv-2">
-                <div class="c-kv-2__inner">
-                    <div class="c-kv-2__head">
-                        <h1 class="c-ttl-1">
-                            <span class="c-ttl-1__en">TimeLine</span>
-                            <span class="c-ttl-1__ja">チーム全体の動きを“小耳にはさめる”<br class="pc-hide">Slackアプリ</span>
-                        </h1>
-                        <div class="c-kv-2__img"><img src="/img/top/img_time_line.webp" alt="TimeLine"></div>
+                <div class="c-kv-2">
+                    <div class="c-kv-2__inner">
+                        <div class="c-kv-2__head">
+                            <h1 class="c-ttl-1">
+                                <span class="c-ttl-1__en">TimeLine</span>
+                                <span class="c-ttl-1__ja">チーム全体の動きを“小耳にはさめる”<br class="pc-hide">Slackアプリ</span>
+                            </h1>
+                            <div class="c-kv-2__img"><img src="/img/top/img_time_line.webp" alt="TimeLine"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- [/c-kv-2] -->
+                <!-- [/c-kv-2] -->
 
-            <div class="c-section-2__container">
-                <div class="c-section-2__cassette">
+                <div class="c-section-2__container">
+                    <div class="c-section-2__cassette">
 
-                    <section class="c-cassette-3">
-                        <div class="c-cassette-3__inner">
-                            <div class="c-cassette-3__txt">
+                        <section class="c-cassette-3">
+                            <div class="c-cassette-3__inner">
+                                <div class="c-cassette-3__txt">
+                                    <div class="c-cassette-3__head">
+
+                                        <h2 class="c-ttl-2">リモートワーク時代に“小耳に挟む”を実現する</h2>
+                                        <!-- [/c-ttl-2] -->
+                                    </div>
+                                </div>
+
+                                <div class="c-cassette-3__txt">
+
+                                    <p class="c-txt-1">
+                                        社内のslackにある公開チャンネルの投稿をまとめ一つのチャンネルで見ることができるアプリケーションです。<br>
+                                        TimeLineチャンネルを見ると、ワークスペースのすべての情報が集められていて、それはまさに、オフィスにその時その場所にいたから聞くことができたあの話、という状況を再現するかのようです。<br>
+                                        自分に関係がある情報のみが入ってくる、効率を重視した働き方も重要ですが、ふと空いた時間にTimeLineチャンネルを覗くことで、チーム全体の息遣いを感じることができて、時には息抜きになり、時にはイノベーションへと繋がっていくでしょう。
+                                    </p>
+                                    <!-- [/c-txt-1] -->
+
+                                </div>
+
+                                <div class="c-cassette-3__btn">
+                                    <div class="c-cassette-3__btn-wrap">
+                                        <a href="https://slack.lne.st/timeline/slack/install" target="_blank"
+                                            class="c-btn-2 btn-install-timeline">
+                                            <div class="c-btn-2__inner">
+                                                <span class="c-btn-2__txt">インストールはこちら</span>
+                                                <span class="c-btn-2__arr-outer">
+                                                    <span class="c-btn-2__arr">
+                                                        <img src="/img/common/icon_arrow.svg" alt="→">
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </a>
+                                        <!-- [/c-btn-2] -->
+                                        <a href="/terms/" class="c-btn-1">
+                                            <div class="c-btn-1__inner">
+                                                <span class="c-btn-1__txt">利用規約</span>
+                                                <span class="c-btn-1__arr-outer">
+                                                    <span class="c-btn-1__arr">
+                                                        <img src="/img/common/icon_arrow.svg" alt="→">
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </a>
+                                        <!-- [/c-btn-1] -->
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- [/c-cassette-3] -->
+
+                        <section class="c-cassette-3">
+                            <div class="c-cassette-3__inner">
                                 <div class="c-cassette-3__head">
 
-                                    <h2 class="c-ttl-2">リモートワーク時代に“小耳に挟む”を実現する</h2>
+                                    <h2 class="c-ttl-2">主な特徴</h2>
                                     <!-- [/c-ttl-2] -->
+
                                 </div>
-                            </div>
-
-                            <div class="c-cassette-3__txt">
-
-                                <p class="c-txt-1">
-                                    社内のslackにある公開チャンネルの投稿をまとめ一つのチャンネルで見ることができるアプリケーションです。<br>
-                                    TimeLineチャンネルを見ると、ワークスペースのすべての情報が集められていて、それはまさに、オフィスにその時その場所にいたから聞くことができたあの話、という状況を再現するかのようです。<br>
-                                    自分に関係がある情報のみが入ってくる、効率を重視した働き方も重要ですが、ふと空いた時間にTimeLineチャンネルを覗くことで、チーム全体の息遣いを感じることができて、時には息抜きになり、時にはイノベーションへと繋がっていくでしょう。
-                                </p>
-                                <!-- [/c-txt-1] -->
-
-                            </div>
-
-                            <div class="c-cassette-3__btn">
-                                <div class="c-cassette-3__btn-wrap">
-                                    <a href="https://slack.lne.st/timeline/slack/install" target="_blank" class="c-btn-2 btn-install-timeline">
-                                        <div class="c-btn-2__inner">
-                                            <span class="c-btn-2__txt">インストールはこちら</span>
-                                            <span class="c-btn-2__arr-outer">
-                                                <span class="c-btn-2__arr">
-                                                    <img src="/img/common/icon_arrow.svg" alt="→">
-                                                </span>
-                                            </span>
-                                        </div>
-                                    </a>
-                                    <!-- [/c-btn-2] -->
-                                    <a href="/terms/" class="c-btn-1">
-                                        <div class="c-btn-1__inner">
-                                            <span class="c-btn-1__txt">利用規約</span>
-                                            <span class="c-btn-1__arr-outer">
-                                                <span class="c-btn-1__arr">
-                                                    <img src="/img/common/icon_arrow.svg" alt="→">
-                                                </span>
-                                            </span>
-                                        </div>
-                                    </a>
-                                    <!-- [/c-btn-1] -->
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- [/c-cassette-3] -->
-
-                    <section class="c-cassette-3">
-                        <div class="c-cassette-3__inner">
-                            <div class="c-cassette-3__head">
-
-                                <h2 class="c-ttl-2">主な特徴</h2>
-                                <!-- [/c-ttl-2] -->
-
-                            </div>
-                            <div class="c-cassette-3__txt">
-                                <ul class="c-list-4">
-                                    <li class="mgb-pc--20">選んだチャンネルの投稿をまとめて一つのチャンネルで見られます。</li>
-                                    <li class="none-marker mgb-pc--20">TimeLineは、公開チャンネル及び、アプリが招待されたチャンネルのpostを一つのチャンネルに集約できるアプリケーションです。</li>
-                                    <li class="none-marker mgb-pc--20">Slackに投稿されたPostのURLのみを取得し、設定されたチャンネルにそのURLをPostする事によって、Slackの機能で元のPostが展開されるというものです。そのため、アプリケーション側に機密情報を渡すことなく、postの転送が可能です。</li>
+                                <div class="c-cassette-3__txt">
+                                    <ul class="c-list-4">
+                                        <li class="mgb-pc--20">選んだチャンネルの投稿をまとめて一つのチャンネルで見られます。</li>
+                                        <li class="none-marker mgb-pc--20">
+                                            TimeLineは、公開チャンネル及び、アプリが招待されたチャンネルのpostを一つのチャンネルに集約できるアプリケーションです。</li>
+                                        <li class="none-marker mgb-pc--20">
+                                            Slackに投稿されたPostのURLのみを取得し、設定されたチャンネルにそのURLをPostする事によって、Slackの機能で元のPostが展開されるというものです。そのため、アプリケーション側に機密情報を渡すことなく、postの転送が可能です。
                                         </li>
-                                    <li class="mgb-pc--20">人別の投稿ランキングやチャンネル別投稿数ランキングなどSlack内の動きを可視化できます。</li>
-                                    <li class="none-marker mgb-pc--20">人別ランキングで誰が活発に発言しているか、チャンネル別ランキングで、どのチャネルが活発にコミュニケーションをしているか確認できます。</li>
-                                    <li class="mgb-pc--20">ChatGPT APIと連携してチャンネルやウェブサイトの要約ができます。</li>
-                                </ul>
-                                <!-- [/c-list-4] -->
+                                        </li>
+                                        <li class="mgb-pc--20">人別の投稿ランキングやチャンネル別投稿数ランキングなどSlack内の動きを可視化できます。</li>
+                                        <li class="none-marker mgb-pc--20">
+                                            人別ランキングで誰が活発に発言しているか、チャンネル別ランキングで、どのチャネルが活発にコミュニケーションをしているか確認できます。</li>
+                                        <li class="mgb-pc--20">ChatGPT APIと連携してチャンネルやウェブサイトの要約ができます。</li>
+                                    </ul>
+                                    <!-- [/c-list-4] -->
 
+                                </div>
                             </div>
-                        </div>
-                    </section>
-                    <!-- [/c-cassette-3] -->
+                        </section>
+                        <!-- [/c-cassette-3] -->
 
-                    <section class="c-cassette-3">
-                        <div class="c-cassette-3__inner">
-                            <div class="c-cassette-3__head">
+                        <section class="c-cassette-3">
+                            <div class="c-cassette-3__inner">
+                                <div class="c-cassette-3__head">
 
-                                <h2 class="c-ttl-2">機能</h2>
-                                <!-- [/c-ttl-2] -->
+                                    <h2 class="c-ttl-2">機能</h2>
+                                    <!-- [/c-ttl-2] -->
 
+                                </div>
+                                <div class="c-cassette-3__txt">
+                                    <h3 class="c-ttl-5">統合タイムラインの生成</h3>
+                                    <p class="c-txt-1">TimeLineは、公開チャンネル及び、アプリが招待されたチャンネルのpostを一つのチャンネルに集約します。</p>
+                                    <h3 class="c-ttl-5">ワークスペースAnalytics</h3>
+                                    <p class="c-txt-1">投稿先チャンネルの設定及び、過去一週間のpost数を表示します。</p>
+                                    <h3 class="c-ttl-5">カスタムタイムライン</h3>
+                                    <p class="c-txt-1">公開チャンネルすべてではなく、特定のチャンネルのみを一つのチャンネルに集約することができます。</p>
+                                    <h3 class="c-ttl-5">転送時翻訳</h3>
+                                    <p class="c-txt-1">DeepLAPIを利用して、翻訳することができます。</p>
+                                    <h3 class="c-ttl-5">トレンドアラート</h3>
+                                    <p class="c-txt-1">過去24hにおけるトレンド情報をお知らせする機能です。</p>
+                                    <h3 class="c-ttl-5">ホームトレンドチャンネル</h3>
+                                    <p class="c-txt-1">アプリケーションのホームタブからいつでも盛り上がっているチャンネルが確認できます。</p>
+                                    <h3 class="c-ttl-5">Bot転送機能</h3>
+                                    <p class="c-txt-1">Botの投稿を転送することができます。</p>
+                                    <h3 class="c-ttl-5">Open AI 連携機能</h3>
+                                    <p class="c-txt-1">チャンネルの要約、AIとの対話、ウェブサイトの要約が可能です。</p>
+                                </div>
                             </div>
-                            <div class="c-cassette-3__txt">
-                                <h3 class="c-ttl-5">統合タイムラインの生成</h3>
-                                <p class="c-txt-1">TimeLineは、公開チャンネル及び、アプリが招待されたチャンネルのpostを一つのチャンネルに集約します。</p>
-                                <h3 class="c-ttl-5">ワークスペースAnalytics</h3>
-                                <p class="c-txt-1">投稿先チャンネルの設定及び、過去一週間のpost数を表示します。</p>
-                                <h3 class="c-ttl-5">カスタムタイムライン</h3>
-                                <p class="c-txt-1">公開チャンネルすべてではなく、特定のチャンネルのみを一つのチャンネルに集約することができます。</p>
-                                <h3 class="c-ttl-5">転送時翻訳</h3>
-                                <p class="c-txt-1">DeepLAPIを利用して、翻訳することができます。</p>
-                                <h3 class="c-ttl-5">トレンドアラート</h3>
-                                <p class="c-txt-1">過去24hにおけるトレンド情報をお知らせする機能です。</p>
-                                <h3 class="c-ttl-5">ホームトレンドチャンネル</h3>
-                                <p class="c-txt-1">アプリケーションのホームタブからいつでも盛り上がっているチャンネルが確認できます。</p>
-                                <h3 class="c-ttl-5">Bot転送機能</h3>
-                                <p class="c-txt-1">Botの投稿を転送することができます。</p>
-                                <h3 class="c-ttl-5">Open AI 連携機能</h3>
-                                <p class="c-txt-1">チャンネルの要約、AIとの対話、ウェブサイトの要約が可能です。</p>
+                        </section>
+                        <!-- [/c-cassette-3] -->
+
+                        <section class="c-cassette-3">
+                            <div class="c-cassette-3__inner">
+                                <div class="c-cassette-3__head">
+
+                                    <h2 class="c-ttl-2">TimeLineの5つの転送モード</h2>
+                                    <!-- [/c-ttl-2] -->
+
+                                </div>
+                                <div class="c-cassette-3__txt">
+                                    <h3 class="c-ttl-5">統合チャンネルモード</h3>
+                                    <p class="c-txt-1 mgb-pc--35">TimeLineアプリが招待されている全ての公開チャンネルの投稿を集める統合チャンネル。</p>
+                                    <p class="tl-img"><img class="tl-img"
+                                            src="https://functions.lne.st/img/products/timeline/timeline-mode1.jpg"
+                                            alt="統合チャンネルモード図" width="871" height="415" /></p>
+                                    <h3 class="c-ttl-5">カスタム転送モード</h3>
+                                    <p class="c-txt-1 mgb-pc--35">必要なチャンネルのみを特定のチャンネルに転送するモード。
+                                        転送時に翻訳することも可能です。</p>
+                                    <p class="tl-img"><img
+                                            src="https://functions.lne.st/img/products/timeline/timeline-mode2.jpg"
+                                            alt="カスタム転送モード図" width="871" height="415" /></p>
+                                    <h3 class="c-ttl-5">特定個人転送モード</h3>
+                                    <p class="c-txt-1 mgb-pc--35">
+                                        TimeLineアプリが招待されている全ての公開チャンネルにおいて、特定の個人が投稿した内容を一つのチャンネルに集約します。</p>
+                                    <p class="tl-img"><img
+                                            src="https://functions.lne.st/img/products/timeline/timeline-mode3.jpg"
+                                            alt="特定個人転送モード図" width="871" height="415" /></p>
+                                    <h3 class="c-ttl-5">複数人転送モード</h3>
+                                    <p class="c-txt-1 mgb-pc--35">一つのチャンネルに、複数人のすべての投稿を集約することも出来ます。</p>
+                                    <p class="tl-img"><img
+                                            src="https://functions.lne.st/img/products/timeline/timeline-mode4.jpg"
+                                            alt="複数人転送モード図" width="871" height="415" /></p>
+                                    <h3 class="c-ttl-5">キーワード転送モード</h3>
+                                    <p class="c-txt-1 mgb-pc--35">指定したキーワードに関する投稿を特定のチャンネルに転送することができます。</p>
+                                    <p class="tl-img"><img
+                                            src="https://functions.lne.st/img/products/timeline/timeline-mode5.jpg"
+                                            alt="キーワード転送モード図" width="871" height="415" /></p>
+                                </div>
                             </div>
-                        </div>
-                    </section>
-                    <!-- [/c-cassette-3] -->
+                        </section>
+                        <!-- [/c-cassette-3] -->
 
-                    <section class="c-cassette-3">
-                        <div class="c-cassette-3__inner">
-                            <div class="c-cassette-3__head">
+                        <section class="c-cassette-3">
+                            <div class="c-cassette-3__inner">
+                                <div class="c-cassette-3__head">
 
-                                <h2 class="c-ttl-2">TimeLineの5つの転送モード</h2>
-                                <!-- [/c-ttl-2] -->
+                                    <h2 class="c-ttl-2">プランと価格について</h2>
+                                    <!-- [/c-ttl-2] -->
 
-                            </div>
-                            <div class="c-cassette-3__txt">
-                                <h3 class="c-ttl-5">統合チャンネルモード</h3>
-                                <p class="c-txt-1 mgb-pc--35">TimeLineアプリが招待されている全ての公開チャンネルの投稿を集める統合チャンネル。</p>
-                                <p class="tl-img"><img class="tl-img" src="https://functions.lne.st/img/products/timeline/timeline-mode1.jpg" alt="統合チャンネルモード図" width="871" height="415" /></p>
-                                <h3 class="c-ttl-5">カスタム転送モード</h3>
-                                <p class="c-txt-1 mgb-pc--35">必要なチャンネルのみを特定のチャンネルに転送するモード。
-                                    転送時に翻訳することも可能です。</p>
-                                <p class="tl-img"><img src="https://functions.lne.st/img/products/timeline/timeline-mode2.jpg" alt="カスタム転送モード図" width="871" height="415" /></p>
-                                <h3 class="c-ttl-5">特定個人転送モード</h3>
-                                <p class="c-txt-1 mgb-pc--35">TimeLineアプリが招待されている全ての公開チャンネルにおいて、特定の個人が投稿した内容を一つのチャンネルに集約します。</p>
-                                <p class="tl-img"><img src="https://functions.lne.st/img/products/timeline/timeline-mode3.jpg" alt="特定個人転送モード図" width="871" height="415" /></p>
-                                <h3 class="c-ttl-5">複数人転送モード</h3>
-                                <p class="c-txt-1 mgb-pc--35">一つのチャンネルに、複数人のすべての投稿を集約することも出来ます。</p>
-                                <p class="tl-img"><img src="https://functions.lne.st/img/products/timeline/timeline-mode4.jpg" alt="複数人転送モード図" width="871" height="415" /></p>
-                                <h3 class="c-ttl-5">キーワード転送モード</h3>
-                                <p class="c-txt-1 mgb-pc--35">指定したキーワードに関する投稿を特定のチャンネルに転送することができます。</p>
-                                <p class="tl-img"><img src="https://functions.lne.st/img/products/timeline/timeline-mode5.jpg" alt="キーワード転送モード図" width="871" height="415" /></p>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- [/c-cassette-3] -->
-                     
-                    <section class="c-cassette-3">
-                        <div class="c-cassette-3__inner">
-                            <div class="c-cassette-3__head">
+                                </div>
+                                <div class="c-cassette-3__txt">
+                                    <ul class="c-list-4">
+                                        <li class="none-marker mgb-pc--20">
+                                            Functionsで提供するアプリの利用料は、使ってみないと効果が見えないという理由から、基本的に無料で使用できます</li>
+                                        <li class="none-marker mgb-pc--20">一方で、※特定の機能 の利用及びサポートプランは有料となっております</li>
+                                        <li class="none-marker mgb-pc--40">
+                                            サポートプランは無料利用と違い、秘密保持契約を結んだ上でご利用いただけますので、業務上の機密情報を共有した状態で相談することが可能になります</li>
+                                    </ul>
 
-                                <h2 class="c-ttl-2">プランと価格について</h2>
-                                <!-- [/c-ttl-2] -->
-
-                            </div>
-                            <div class="c-cassette-3__txt">
-                                <ul class="c-list-4">
-                                    <li class="none-marker mgb-pc--20">Functionsで提供するアプリの利用料は、使ってみないと効果が見えないという理由から、基本的に無料で使用できます</li>
-                                    <li class="none-marker mgb-pc--20">一方で、※特定の機能 の利用及びサポートプランは有料となっております</li>
-                                    <li class="none-marker mgb-pc--40">サポートプランは無料利用と違い、秘密保持契約を結んだ上でご利用いただけますので、業務上の機密情報を共有した状態で相談することが可能になります</li>
-                                </ul>
-
-                                <h3 class="c-ttl-5 mgb-pc--20">※特定機能：TimeLineについて</h3>
-                                <ul class="c-list-4">
+                                    <h3 class="c-ttl-5 mgb-pc--20">※特定機能：TimeLineについて</h3>
+                                    <ul class="c-list-4">
                                         <li class="none-marker mgb-pc--10">TimeLineは、投稿の転送機能を提供いたします</li>
                                         <li class="none-marker mgb-pc--10">転送及び、翻訳をご利用になる際に1クレジット消費します*</li>
                                         <li class="none-marker mgb-pc--10">最初の10,000クレジットは試用クレジットとしてご活用ください</li>
@@ -334,108 +356,112 @@
                                         <li class="none-marker mgb-pc--10">最低購入クレジット単位：50,000クレジット</li>
                                         <li class="none-marker mgb-pc--20">*翻訳転送をする場合は2クレジット(転送+翻訳)消費されます</li>
                                     </ul>
-                                <!-- [/c-list-4] -->
+                                    <!-- [/c-list-4] -->
+                                </div>
                             </div>
-                        </div>
-                    </section>
-                    <!-- [/c-cassette-3] -->
+                        </section>
+                        <!-- [/c-cassette-3] -->
+                    </div>
                 </div>
-            </div>
 
-            <div class="c-block-2">
-                <div class="c-block-2__inner">
-                    <div class="c-cassette-3">
-                        <div class="c-cassette-3__inner">
-                            <div class="c-cassette-3__btn">
-                                <div class="c-cassette-3__btn-wrap">
-                                    <a href="https://slack.lne.st/timeline/slack/install" target="_blank" class="c-btn-2 btn-install-timeline">
-                                        <div class="c-btn-2__inner">
-                                            <span class="c-btn-2__txt">インストールはこちら</span>
-                                            <span class="c-btn-2__arr-outer">
-                                                <span class="c-btn-2__arr">
-                                                    <img src="/img/common/icon_arrow.svg" alt="→">
+                <div class="c-block-2">
+                    <div class="c-block-2__inner">
+                        <div class="c-cassette-3">
+                            <div class="c-cassette-3__inner">
+                                <div class="c-cassette-3__btn">
+                                    <div class="c-cassette-3__btn-wrap">
+                                        <a href="https://slack.lne.st/timeline/slack/install" target="_blank"
+                                            class="c-btn-2 btn-install-timeline">
+                                            <div class="c-btn-2__inner">
+                                                <span class="c-btn-2__txt">インストールはこちら</span>
+                                                <span class="c-btn-2__arr-outer">
+                                                    <span class="c-btn-2__arr">
+                                                        <img src="/img/common/icon_arrow.svg" alt="→">
+                                                    </span>
                                                 </span>
-                                            </span>
-                                        </div>
-                                    </a>
-                                    <!-- [/c-btn-2] -->
-                                    <a href="/terms/" class="c-btn-1">
-                                        <div class="c-btn-1__inner">
-                                            <span class="c-btn-1__txt">利用規約</span>
-                                            <span class="c-btn-1__arr-outer">
-                                                <span class="c-btn-1__arr">
-                                                    <img src="/img/common/icon_arrow.svg" alt="→">
+                                            </div>
+                                        </a>
+                                        <!-- [/c-btn-2] -->
+                                        <a href="/terms/" class="c-btn-1">
+                                            <div class="c-btn-1__inner">
+                                                <span class="c-btn-1__txt">利用規約</span>
+                                                <span class="c-btn-1__arr-outer">
+                                                    <span class="c-btn-1__arr">
+                                                        <img src="/img/common/icon_arrow.svg" alt="→">
+                                                    </span>
                                                 </span>
-                                            </span>
-                                        </div>
-                                    </a>
-                                    <!-- [/c-btn-1] -->
+                                            </div>
+                                        </a>
+                                        <!-- [/c-btn-1] -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- [/c-cassette-3] -->
                     </div>
-                    <!-- [/c-cassette-3] -->
                 </div>
-            </div>
-            <!-- [/c-block-2] -->
+                <!-- [/c-block-2] -->
 
-        </section>
-        <!-- [/c-section-2] -->
-
-    </div>
-    <!-- [/l-contents] -->
-
-    <div class="l-footer-pagetop">
-        <a href="#"  class="l-footer-pagetop__link">
-            <span class="l-footer-pagetop__txt">TOP</span>
-        </a>
-    </div>
-    <!-- [/l-footer-pagetop] -->
-
-    <footer class="l-footer">
-        <div class="l-footer__container">
-            <p class="l-footer__logo">
-                <a href="/" class="l-footer__logo-link">
-                    <img src="/img/common/logo_functions-from-l.png" alt="Functions from L">
-                </a>
-            </p>
-
-            <nav class="l-footer-nav">
-                <ul class="l-footer-nav__list">
-                    <li class="l-footer-nav__item">
-                        <a href="https://k.lne.st/" target="_blank" class="l-footer-nav__link">運営会社につい<span class="link-blank">て</span></a>
-                    </li>
-                    <li class="l-footer-nav__item">
-                        <a href="/terms/" class="l-footer-nav__link">利用規約</a>
-                    </li>
-                    <li class="l-footer-nav__item">
-                        <a href="https://k.lne.st/privacy/" target="_blank" class="l-footer-nav__link">プライバシーポリシ<span class="link-blank">ー</span></a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- [/l-footer-nav] -->
-
-            <div class="l-footer-lower">
-                <div class="l-footer-lower__copyright">
-                    <small class="l-footer-lower__copyright-txt">&copy; Functions from L - serviced by</small>
-                </div>
-                <p class="l-footer-lower__logo">
-                    <a href="https://k.lne.st/" target="_blank" class="l-footer-lower__logo-link">
-                        <img src="/img/common/logo_leave-a-nest.png" alt="Leave a Nest KNOWLEDGE">
-                    </a>
-                </p>
-            </div>
-            <!-- [/l-footer-lower] -->
+            </section>
+            <!-- [/c-section-2] -->
 
         </div>
-    </footer>
-    <!-- [/l-footer] -->
+        <!-- [/l-contents] -->
 
-</div>
-<!-- [/l-wrapper] -->
+        <div class="l-footer-pagetop">
+            <a href="#" class="l-footer-pagetop__link">
+                <span class="l-footer-pagetop__txt">TOP</span>
+            </a>
+        </div>
+        <!-- [/l-footer-pagetop] -->
 
-<!-- scripts -->
-<script src="/js/lib/lib.js"></script>
-<script src="/js/common.js"></script>
+        <footer class="l-footer">
+            <div class="l-footer__container">
+                <p class="l-footer__logo">
+                    <a href="/" class="l-footer__logo-link">
+                        <img src="/img/common/logo_functions-from-l.png" alt="Functions from L">
+                    </a>
+                </p>
+
+                <nav class="l-footer-nav">
+                    <ul class="l-footer-nav__list">
+                        <li class="l-footer-nav__item">
+                            <a href="https://k.lne.st/" target="_blank" class="l-footer-nav__link">運営会社につい<span
+                                    class="link-blank">て</span></a>
+                        </li>
+                        <li class="l-footer-nav__item">
+                            <a href="/terms/" class="l-footer-nav__link">利用規約</a>
+                        </li>
+                        <li class="l-footer-nav__item">
+                            <a href="https://k.lne.st/privacy/" target="_blank"
+                                class="l-footer-nav__link">プライバシーポリシ<span class="link-blank">ー</span></a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- [/l-footer-nav] -->
+
+                <div class="l-footer-lower">
+                    <div class="l-footer-lower__copyright">
+                        <small class="l-footer-lower__copyright-txt">&copy; Functions from L - serviced by</small>
+                    </div>
+                    <p class="l-footer-lower__logo">
+                        <a href="https://k.lne.st/" target="_blank" class="l-footer-lower__logo-link">
+                            <img src="/img/common/logo_leave-a-nest.png" alt="Leave a Nest KNOWLEDGE">
+                        </a>
+                    </p>
+                </div>
+                <!-- [/l-footer-lower] -->
+
+            </div>
+        </footer>
+        <!-- [/l-footer] -->
+
+    </div>
+    <!-- [/l-wrapper] -->
+
+    <!-- scripts -->
+    <script src="/js/lib/lib.js"></script>
+    <script src="/js/common.js"></script>
 </body>
+
 </html>
