@@ -1,505 +1,552 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PHMWZX5P');</script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PHMWZX5P');</script>
     <!-- End Google Tag Manager -->
-<!-- meta settings -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<meta name="format-detection" content="telephone=no">
+    <!-- meta settings -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="format-detection" content="telephone=no">
 
-<!-- meta description -->
-<meta name="description" content="SlackでChatGPTと会話ができるアプリ「Party on Slack」。SlackのUIでChatGPTと会話ができます。あなたのSlackにもAIを参加させてみましょう。">
+    <!-- meta description -->
+    <meta name="description"
+        content="SlackでChatGPTと会話ができるアプリ「Party on Slack」。SlackのUIでChatGPTと会話ができます。あなたのSlackにもAIを参加させてみましょう。">
 
-<!-- title -->
-<title>SlackでChatGPTと会話ができるアプリ - Party on Slack</title>
+    <!-- title -->
+    <title>SlackでChatGPTと会話ができるアプリ - Party on Slack</title>
 
-<!-- ogp -->
-<meta property="og:locale" content="ja_JP">
-<meta property="og:type" content="article">
-<meta property="og:title" content="SlackでChatGPTと会話ができるアプリ - Party on Slack">
-<meta property="og:url" content="https://functions.lne.st/products/partyonslack/">
-<meta property="og:image" content="https://functions.lne.st/img/ogp.png">
-<meta property="og:site_name" content="Functions from L">
-<meta property="og:description" content="SlackでChatGPTと会話ができるアプリ「Party on Slack」。SlackのUIでChatGPTと会話ができます。あなたのSlackにもAIを参加させてみましょう。">
-<meta name="twitter:card" content="summary">
+    <!-- ogp -->
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="SlackでChatGPTと会話ができるアプリ - Party on Slack">
+    <meta property="og:url" content="https://functions.lne.st/products/partyonslack/">
+    <meta property="og:image" content="https://functions.lne.st/img/ogp.png">
+    <meta property="og:site_name" content="Functions from L">
+    <meta property="og:description"
+        content="SlackでChatGPTと会話ができるアプリ「Party on Slack」。SlackのUIでChatGPTと会話ができます。あなたのSlackにもAIを参加させてみましょう。">
+    <meta name="twitter:card" content="summary">
 
-<!-- favicon / apple-touch-icon -->
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" href="/icon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="manifest" href="/manifest.webmanifest">
+    <!-- favicon / apple-touch-icon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.webmanifest">
 
-<!-- styles -->
-<link rel="stylesheet" href="/css/reset.css">
-<link rel="stylesheet" href="/css/plugin.css">
-<link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="/css/module.css">
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/plugin.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/module.css">
 
-<!-- fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PHMWZX5P" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
-<!-- End Google Tag Manager (noscript) -->
-<div class="l-wrapper">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PHMWZX5P" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="l-wrapper">
 
-    <header class="l-header">
-        <div class="l-header__container">
-            <p class="l-header__logo">
-                <a href="/" class="l-header__logo-link">
-                    <img src="/img/common/logo_functions-from-l.png" alt="Functions from L">
-                </a>
-            </p>
-
-            <button type="button" class="l-header-menu-button js-menu-trigger">
-                <span class="l-header-menu-button__lines">
-                    <span class="l-header-menu-button__line l-header-menu-button__line--top"></span>
-                    <span class="l-header-menu-button__line l-header-menu-button__line--bottom"></span>
-                </span>
-                <span class="l-header-menu-button__txt l-header-menu-button__txt--open">MENU</span>
-                <span class="l-header-menu-button__txt l-header-menu-button__txt--close">CLOSE</span>
-            </button>
-            <!-- [/l-header-menu-button] -->
-
-        </div>
-    </header>
-    <!-- [/l-header] -->
-
-    <nav class="l-global-nav js-menu">
-        <div class="l-global-nav__container">
-            <ul class="l-global-nav__list">
-                <li class="l-global-nav__item">
-                    <a href="/" class="l-global-nav__link">
-                        <span class="l-global-nav__txt-en">Top</span>
-                        <span class="l-global-nav__txt-ja">トップ</span>
-                    </a>
-                </li>
-                <li class="l-global-nav__item is-current">
-                    <a href="/products/partyonslack/" class="l-global-nav__link">
-                        <span class="l-global-nav__txt-en">Party on Slack</span>
-                        <span class="l-global-nav__txt-ja">SlackでChatGPTと会話ができるアプリ</span>
-                    </a>
-                </li>
-                <li class="l-global-nav__item">
-                    <a href="/products/timeline/" class="l-global-nav__link">
-                        <span class="l-global-nav__txt-en">TimeLine</span>
-                        <span class="l-global-nav__txt-ja">チーム全体の動きを“小耳にはさめる”Slackアプリ</span>
-                    </a>
-                </li>
-                <li class="l-global-nav__item">
-                    <a href="/products/tasukaru/" class="l-global-nav__link">
-                        <span class="l-global-nav__txt-en">TASUKARU -TaskAll-</span>
-                        <span class="l-global-nav__txt-ja">Slack上でタスク管理を完結できるアプリ</span>
-                    </a>
-                </li>
-                <li class="l-global-nav__item">
-                    <a href="/products/oyasumibot/" class="l-global-nav__link">
-                        <span class="l-global-nav__txt-en">OYASUMI bot</span>
-                        <span class="l-global-nav__txt-ja">通知なしで休暇を安心して過ごすためのSlackアプリ</span>
-                    </a>
-                </li>
-                <li class="l-global-nav__item">
-                    <a href="/products/tips/" class="l-global-nav__link">
-                        <span class="l-global-nav__txt-en">TIPS</span>
-                        <span class="l-global-nav__txt-ja">情報浸透のための高機能リマインダーSlackアプリ</span>
-                    </a>
-                </li>
-                <li class="l-global-nav__item">
-                    <a href="/products/yokoku/" class="l-global-nav__link">
-                        <span class="l-global-nav__txt-en">YOKOKU</span>
-                        <span class="l-global-nav__txt-ja">Slack上で提案機会を逃さないための“予告”アプリ</span>
-                    </a>
-                </li>
-                <li class="l-global-nav__item">
-                    <a href="/products/salesforceconnector/" class="l-global-nav__link">
-                        <span class="l-global-nav__txt-en">Salesforce Connector</span>
-                        <span class="l-global-nav__txt-ja">Slack上でSalesforceの活動報告を完結できるアプリ</span>
-                    </a>
-                </li>
-                <li class="l-global-nav__item">
-                    <a href="/products/deepltranslator/" class="l-global-nav__link">
-                        <span class="l-global-nav__txt-en">DeepL Translator</span>
-                        <span class="l-global-nav__txt-ja">投稿したテキストをSlack上で翻訳できるアプリ</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <!-- [/l-global-nav] -->
-
-    <div class="l-contents">
-
-        <div class="l-breadcrumb sp-hide">
-            <ul class="l-breadcrumb__list">
-                <li class="l-breadcrumb__item">
-                    <a href="/" class="l-breadcrumb__txt">Top</a>
-                </li>
-                <!-- <li class="l-breadcrumb__item">
-                    <a href="/products/" class="l-breadcrumb__txt">Products</a>
-                </li> -->
-                <li class="l-breadcrumb__item">
-                    <span class="l-breadcrumb__txt">Party on Slack</span>
-                </li>
-            </ul>
-        </div>
-        <!-- [/l-breadcrumb] -->
-
-        <section class="c-section-2">
-
-            <div class="c-kv-2">
-                <div class="c-kv-2__inner">
-                    <div class="c-kv-2__head">
-                        <h1 class="c-ttl-1">
-                            <span class="c-ttl-1__en">Party on Slack</span>
-                            <span class="c-ttl-1__ja">SlackでChatGPTと会話ができるアプリ</span>
-                        </h1>
-                        <div class="c-kv-2__img"><img src="/img/top/img_party_on_slack.webp" alt="Party on Slack"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- [/c-kv-2] -->
-
-            <div class="c-section-2__container">
-                <div class="c-section-2__cassette">
-                    <section class="c-cassette-3">
-                        <div class="c-cassette-3__img">
-                            <div class="c-img c-img--app">
-                                <img src="/img/products/img_app_party.jpg" alt="Party on Slack">
-                            </div>
-                            <!-- [/c-img] -->
-                        </div>
-                        <div class="c-cassette-3__inner">
-                            <div class="c-cassette-3__txt">
-                                <div class="c-cassette-3__head">
-
-                                    <h2 class="c-ttl-2">Slackで仲間とコミュニケーションするようにAIを使う</h2>
-                                    <!-- [/c-ttl-2] -->
-                                </div>
-                            </div>
-
-                            <div class="c-cassette-3__txt">
-
-                                <p class="c-txt-1">
-                                    いつものSlackでコミュニケーションするようにAIとも会話できれば、ちょっとしたアイデア出しや資料の要約など、ビジネスの効率アップは間違いないです。<br>
-                                    あなたのSlackにもAIを参加させてみましょう。
-                                </p>
-                                <!-- [/c-txt-1] -->
-
-                            </div>
-
-                            <div class="c-cassette-3__btn">
-                                <div class="c-cassette-3__btn-wrap">
-                                    <a href="https://slack.lne.st/gptparty/slack/install" target="_blank" class="c-btn-2 btn-install-partyonslack">
-                                        <div class="c-btn-2__inner">
-                                            <span class="c-btn-2__txt">インストールはこちら</span>
-                                            <span class="c-btn-2__arr-outer">
-                                                <span class="c-btn-2__arr">
-                                                    <img src="/img/common/icon_arrow.svg" alt="→">
-                                                </span>
-                                            </span>
-                                        </div>
-                                    </a>
-                                    <!-- [/c-btn-2] -->
-                                    <a href="/terms/" class="c-btn-1">
-                                        <div class="c-btn-1__inner">
-                                            <span class="c-btn-1__txt">利用規約</span>
-                                            <span class="c-btn-1__arr-outer">
-                                                <span class="c-btn-1__arr">
-                                                    <img src="/img/common/icon_arrow.svg" alt="→">
-                                                </span>
-                                            </span>
-                                        </div>
-                                    </a>
-                                    <!-- [/c-btn-1] -->
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- [/c-cassette-3] -->
-
-                    <section class="c-cassette-3">
-                        <div class="c-cassette-3__inner">
-                            <div class="c-cassette-3__head">
-
-                                <h2 class="c-ttl-2">主な特徴</h2>
-                                <!-- [/c-ttl-2] -->
-
-                            </div>
-                            <div class="c-cassette-3__txt">
-                                <ul class="c-list-4">
-                                    <li class="mgb-pc--20">SlackのUIでChatGPTと会話ができます。</li>
-                                    <li class="none-marker mgb-pc--20">「Party on Slack」は、SlackのワークスペースにAI機能を統合させるアプリケーションです。</li>
-                                    <li class="none-marker">OpenAIのChatGPT APIを利用し、Slack上でChatGPTなどの生成AIと直接自然なチャットが可能になります。</li>
-                                    <li class="none-marker mgb-pc--35">このアプリを利用すると、タスクの自動化や、メッセージの要約、情報検索など、正確でスピーディーの高い回答を実現でき、アイデア出しや資料の要約など業務効率の向上が期待できます。</li>
-                                    <li class="mgb-pc--20">OpenAI APIを利用するので、入力データを学習データとして取り込まれません。</li> 
-                                    <li class="none-marker mgb-pc--20">ChatGPTをWeb版で使う場合、オプトアウト設定をしないとOpenAIの学習データとして利用されてしまいますが、APIを経由することで学習データにはならないことが約束されています。</li>
-                                    <li class="none-marker">加えて、Party on Slackでは、ユーザーの皆さんの入力内容及びChatGPTからのレスポンスともにデータベースへの保存やログ出力を行いませんのでご安心ください。</li>
-                                    <li class="none-marker mgb-pc--20">エンベッディング機能により必要に応じて自社情報をPineconeに格納し、Slack上のChatGPTでその情報が活用できます。</li>
-                                    <li class="none-marker mgb-pc--20">多様なAIモデルの利用：OpenAIのChatGPTに加え、Google Gemini、AnthropicのClaudeやStability AIのStable Diffusion、Azure OpenAI API、AWS Bedrock API、Groq API、Nvidia API、PLaMo API など、複数の生成AIモデルに対応しています。</li>
-                                    <li class="none-marker mgb-pc--35">(Difyで作成したAI BOTもAPIを登録することで利用可能になります)</li>
-                                    <li class="mgb-pc--20">PDF/Wordファイルを要約することで資料を読み込む時間を短縮できます。</li>
-                                    <li class="none-marker mgb-pc--20">PDFやWordファイルをアップロードし、AIが内容を要約することで、資料の理解を迅速化します。</li>
-                                    <li class="none-marker">また音声ファイルを文字起こしして要約することもできます。</li>
-                                </ul>
-                                    <!-- [/c-list-4] -->
-
-                            </div>
-                        </div>
-                    </section>
-                    <!-- [/c-cassette-3] -->
-
-                    <section class="c-cassette-3">
-                        <div class="c-cassette-3__inner">
-                            <div class="c-cassette-3__head">
-
-                                <h2 class="c-ttl-2">機能</h2>
-                                <!-- [/c-ttl-2] -->
-
-                            </div>
-
-                            <div class="c-cassette-3__txt">
-                                <h3 class="c-ttl-5">自然言語の対応</h3>
-                                <p class="c-txt-1">・Slackチャンネルで「@Party on Slack」をメンションするだけでAIとの呼び出し会話を始めることができます。</p>
-                                <h3 class="c-ttl-5">Slackにきく</h3>
-                                <p class="c-txt-1">・Slack内のメッセージを検索して、回答をLLM処理して投稿します。</p>
-                                <h3 class="c-ttl-5">要約機能</h3>
-                                <p class="c-txt-1">・PDFやWordファイル、SlackのスレッドをAIが要約します。</p>
-                                <p class="c-txt-1">PDFやWordファイル、ドキュメントをアップロードしたり、貼り付けた長文テキストの要約、また音声ファイルを文字起こしして要約します。</p>
-                                
-                                <dl class="c-list-4">
-                                <dt class="c-txt-1 fw-bold">現在の対応ファイル一覧</dt>
-                                <dd class="c-txt-1">動画ファイル：mp4、mpeg、webm</dd>
-                                <dd>音声ファイル：mp3、m4a、mpga、wav</dd>
-                                <dd>文書ファイル：pdf、docx、txt、markdown、html</dd>
-                                <dd>表計算ファイル：csv、xlsx</dd>
-                                <dd>プレゼンテーションファイル： pptx</dd>
-                                <dd>データファイル： json、xml、yaml</dd>
-                                </dl>
-                                
-                                <dl class="c-list-4 ">
-                                <dt class="mgb-pc--10 c-txt-1 fw-bold">次のようなデータについてもAI処理できます：</dt>
-                                <dd class="mgb-pc--10">・Googleスプレッドシートのデータを活用</dd>
-                                <dd class="mgb-pc--10">・インターネット検索の情報を取り込み</dd>
-                                <dd class="mgb-pc--10"></dd>・Slackの会話内容を基に分析</dd>
-                                </dl>
-                                
-                                <h3 class="c-ttl-5">エンベッティング機能</h3>
-                                <p class="c-txt-1">・自社情報をPinecone に格納することで、ChatGPTが自社の情報も活用してくれます。</p>
-                                <h3 class="c-ttl-5">音声を文字起こし</h3>
-                                <p class="c-txt-1">・Slackで行われた会議や音声データを文字化し、議事録として利用できます。
-                                </p>
-                                <h3 class="c-ttl-5">画像生成機能</h3>
-                                <p class="c-txt-1">・dall-e、Stable Diffusionが利用可能で、そこから画像を生成することができます。</p>
-                                <h3 class="c-ttl-5">RSSコンシェルジュ</h3>
-                                <p class="c-txt-1">・RSS feedのURLを登録すると、定期的に新規記事をLLM処理し、チャンネルに投稿します。</p>
-                                <h3 class="c-ttl-5">スケジュール調整</h3>
-                                <p class="c-txt-1">・Googleカレンダーを調べて時間調整をすることが出来ます。調整したい人と調整する期間を選択することでスケジュール調整ができます。</p>
-                                <h3 class="c-ttl-5">カスタマイズ可能なキャラクター</h3>
-                                <p class="c-txt-1">・AIの口調や個性を設定して、団体に合わせた実用的な返答を構築できます。</p>
-                            </div>
-
-                        </div>
-
-
-                        <div class="c-cassette-3__btn">
-                            <div class="c-cassette-3__btn-wrap">
-                                <a href="https://slack.lne.st/gptparty/slack/install" target="_blank" class="c-btn-2 btn-install-partyonslack">
-                                    <div class="c-btn-2__inner">
-                                        <span class="c-btn-2__txt">インストールはこちら</span>
-                                        <span class="c-btn-2__arr-outer">
-                                            <span class="c-btn-2__arr">
-                                                <img src="/img/common/icon_arrow.svg" alt="→">
-                                            </span>
-                                        </span>
-                                    </div>
-                                </a>
-                                <!-- [/c-btn-2] -->
-                                <a href="/terms/" class="c-btn-1">
-                                    <div class="c-btn-1__inner">
-                                        <span class="c-btn-1__txt">利用規約</span>
-                                        <span class="c-btn-1__arr-outer">
-                                            <span class="c-btn-1__arr">
-                                                <img src="/img/common/icon_arrow.svg" alt="→">
-                                            </span>
-                                        </span>
-                                    </div>
-                                </a>
-                                <!-- [/c-btn-1] -->
-                            </div>
-                        </div>
-
-
-
-                    </section>
-                    <!-- [/c-cassette-3] -->
-
-                    <!-- [/c-cassette-3] -->
-
-                    <section class="c-cassette-3">
-                        <div class="c-cassette-3__inner">
-                            <div class="c-cassette-3__head">
-
-                                <h2 class="c-ttl-2">ChatGPTをセキュアに使いたいならParty on Slack</h2>
-                                <!-- [/c-ttl-2] -->
-
-                            </div>
-
-                            <div class="c-cassette-3__txt">
-                                <p class="c-txt-1">ChatGPTをWeb版で使う場合、オプトアウト設定をしないとOpenAIの学習データとして利用されてしまいますが、APIを経由することで<span class="emphasize-text">学習データにはならないことが約束されています</span>。</p>
-                                <p class="c-txt-1">加えて、Party on Slackでは、ユーザーの皆さんの入力内容及びChatGPTからのレスポンスともに<span class="emphasize-text">データベースへの保存やログ出力を行いません</span>。プログラム上を情報が通過していきますが、これを横から閲覧するということはありませんのでご安心ください。</p>
-                                <h3 class="c-ttl-5">それでも不安な場合は…</h3>
-                                <p class="c-txt-1">そうは言っても、これは口約束です。利用に不安があるな、しっかり契約で縛っておきたいなという場合はご安心ください。サポート契約を結ぶ事ができます。詳細につきましては、アプリのホーム画面の問い合わせボタン、または以下のボタン(リバネスナレッジお問い合わせフォーム)よりお問い合わせください。</p>
-
-                                <div class="c-cassette-1__btn">
-
-                                    <a href="https://k.lne.st/contact-us/" target="_blank" class="c-btn-2 btn-contact-k">
-                                        <div class="c-btn-2__inner">
-                                            <span class="c-btn-2__txt">お問い合わせ</span>
-                                            <span class="c-btn-2__arr-outer">
-                                                <span class="c-btn-2__arr">
-                                                    <img src="/img/common/icon_arrow.svg" alt="→">
-                                                </span>
-                                            </span>
-                                        </div>
-                                    </a>
-                                    <!-- [/c-btn-2] -->
-    
-                                </div>
-
-
-
-                            </div>
-
-                        </div>
-                    </section>
-                    <!-- [/c-cassette-3] -->
-                    <section class="c-cassette-3">
-                        <div class="c-cassette-3__inner">
-                            <div class="c-cassette-3__head">
-
-                                <h2 class="c-ttl-2">プランと価格について</h2>
-                                <!-- [/c-ttl-2] -->
-
-                            </div>
-                            <div class="c-cassette-3__txt">
-                                <ul class="c-list-4">
-                                    <li class="none-marker mgb-pc--20">Functionsで提供するアプリの利用料は、使ってみないと効果が見えないという理由から、基本的に無料で使用できます</li>
-                                    <li class="none-marker mgb-pc--0">一方で、※特定の機能の利用及びサポートプランは有料となっております</li>
-                                    <li class="none-marker mgb-pc--20">(<a href="https://functions.lne.st/products/timeline/" ><span class="emphasize-text">※特定機能：TimeLineについて</span></a>) </li>
-                                    <li class="none-marker mgb-pc--10">サポートプランは無料利用と違い、秘密保持契約を結んだ上でご利用いただけますので、業務上の機密情報を共有した状態で相談することが可能になります</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- [/c-cassette-3] -->
-                </div>
-            </div>
-
-            <div class="c-block-2">
-                <div class="c-block-2__inner">
-                    <div class="c-cassette-3">
-                        <div class="c-cassette-3__inner">
-                            <div class="c-cassette-3__btn">
-                                <div class="c-cassette-3__btn-wrap">
-                                    <a href="https://slack.lne.st/gptparty/slack/install" target="_blank" class="c-btn-2 btn-install-partyonslack">
-                                        <div class="c-btn-2__inner">
-                                            <span class="c-btn-2__txt">インストールはこちら</span>
-                                            <span class="c-btn-2__arr-outer">
-                                                <span class="c-btn-2__arr">
-                                                    <img src="/img/common/icon_arrow.svg" alt="→">
-                                                </span>
-                                            </span>
-                                        </div>
-                                    </a>
-                                    <!-- [/c-btn-2] -->
-                                    <a href="/terms/" class="c-btn-1">
-                                        <div class="c-btn-1__inner">
-                                            <span class="c-btn-1__txt">利用規約</span>
-                                            <span class="c-btn-1__arr-outer">
-                                                <span class="c-btn-1__arr">
-                                                    <img src="/img/common/icon_arrow.svg" alt="→">
-                                                </span>
-                                            </span>
-                                        </div>
-                                    </a>
-                                    <!-- [/c-btn-1] -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- [/c-cassette-3] -->
-                </div>
-            </div>
-            <!-- [/c-block-2] -->
-
-        </section>
-        <!-- [/c-section-2] -->
-
-    </div>
-    <!-- [/l-contents] -->
-
-    <div class="l-footer-pagetop">
-        <a href="#"  class="l-footer-pagetop__link">
-            <span class="l-footer-pagetop__txt">TOP</span>
-        </a>
-    </div>
-    <!-- [/l-footer-pagetop] -->
-
-    <footer class="l-footer">
-        <div class="l-footer__container">
-            <p class="l-footer__logo">
-                <a href="/" class="l-footer__logo-link">
-                    <img src="/img/common/logo_functions-from-l.png" alt="Functions from L">
-                </a>
-            </p>
-
-            <nav class="l-footer-nav">
-                <ul class="l-footer-nav__list">
-                    <li class="l-footer-nav__item">
-                        <a href="https://k.lne.st/" target="_blank" class="l-footer-nav__link">運営会社につい<span class="link-blank">て</span></a>
-                    </li>
-                    <li class="l-footer-nav__item">
-                        <a href="/terms/" class="l-footer-nav__link">利用規約</a>
-                    </li>
-                    <li class="l-footer-nav__item">
-                        <a href="https://k.lne.st/privacy/" target="_blank" class="l-footer-nav__link">プライバシーポリシ<span class="link-blank">ー</span></a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- [/l-footer-nav] -->
-
-            <div class="l-footer-lower">
-                <div class="l-footer-lower__copyright">
-                    <small class="l-footer-lower__copyright-txt">&copy; Functions from L - serviced by</small>
-                </div>
-                <p class="l-footer-lower__logo">
-                    <a href="https://k.lne.st/" target="_blank" class="l-footer-lower__logo-link">
-                        <img src="/img/common/logo_leave-a-nest.png" alt="Leave a Nest KNOWLEDGE">
+        <header class="l-header">
+            <div class="l-header__container">
+                <p class="l-header__logo">
+                    <a href="/" class="l-header__logo-link">
+                        <img src="/img/common/logo_functions-from-l.png" alt="Functions from L">
                     </a>
                 </p>
+
+                <button type="button" class="l-header-menu-button js-menu-trigger">
+                    <span class="l-header-menu-button__lines">
+                        <span class="l-header-menu-button__line l-header-menu-button__line--top"></span>
+                        <span class="l-header-menu-button__line l-header-menu-button__line--bottom"></span>
+                    </span>
+                    <span class="l-header-menu-button__txt l-header-menu-button__txt--open">MENU</span>
+                    <span class="l-header-menu-button__txt l-header-menu-button__txt--close">CLOSE</span>
+                </button>
+                <!-- [/l-header-menu-button] -->
+
             </div>
-            <!-- [/l-footer-lower] -->
+        </header>
+        <!-- [/l-header] -->
+
+        <nav class="l-global-nav js-menu">
+            <div class="l-global-nav__container">
+                <ul class="l-global-nav__list">
+                    <li class="l-global-nav__item">
+                        <a href="/" class="l-global-nav__link">
+                            <span class="l-global-nav__txt-en">Top</span>
+                            <span class="l-global-nav__txt-ja">トップ</span>
+                        </a>
+                    </li>
+                    <li class="l-global-nav__item is-current">
+                        <a href="/products/partyonslack/" class="l-global-nav__link">
+                            <span class="l-global-nav__txt-en">Party on Slack</span>
+                            <span class="l-global-nav__txt-ja">SlackでChatGPTと会話ができるアプリ</span>
+                        </a>
+                    </li>
+                    <li class="l-global-nav__item">
+                        <a href="/products/timeline/" class="l-global-nav__link">
+                            <span class="l-global-nav__txt-en">TimeLine</span>
+                            <span class="l-global-nav__txt-ja">チーム全体の動きを“小耳にはさめる”Slackアプリ</span>
+                        </a>
+                    </li>
+                    <li class="l-global-nav__item">
+                        <a href="/products/tasukaru/" class="l-global-nav__link">
+                            <span class="l-global-nav__txt-en">TASUKARU -TaskAll-</span>
+                            <span class="l-global-nav__txt-ja">Slack上でタスク管理を完結できるアプリ</span>
+                        </a>
+                    </li>
+                    <li class="l-global-nav__item">
+                        <a href="/products/oyasumibot/" class="l-global-nav__link">
+                            <span class="l-global-nav__txt-en">OYASUMI bot</span>
+                            <span class="l-global-nav__txt-ja">通知なしで休暇を安心して過ごすためのSlackアプリ</span>
+                        </a>
+                    </li>
+                    <li class="l-global-nav__item">
+                        <a href="/products/tips/" class="l-global-nav__link">
+                            <span class="l-global-nav__txt-en">TIPS</span>
+                            <span class="l-global-nav__txt-ja">情報浸透のための高機能リマインダーSlackアプリ</span>
+                        </a>
+                    </li>
+                    <li class="l-global-nav__item">
+                        <a href="/products/yokoku/" class="l-global-nav__link">
+                            <span class="l-global-nav__txt-en">YOKOKU</span>
+                            <span class="l-global-nav__txt-ja">Slack上で提案機会を逃さないための“予告”アプリ</span>
+                        </a>
+                    </li>
+                    <li class="l-global-nav__item">
+                        <a href="/products/salesforceconnector/" class="l-global-nav__link">
+                            <span class="l-global-nav__txt-en">Salesforce Connector</span>
+                            <span class="l-global-nav__txt-ja">Slack上でSalesforceの活動報告を完結できるアプリ</span>
+                        </a>
+                    </li>
+                    <li class="l-global-nav__item">
+                        <a href="/products/deepltranslator/" class="l-global-nav__link">
+                            <span class="l-global-nav__txt-en">DeepL Translator</span>
+                            <span class="l-global-nav__txt-ja">投稿したテキストをSlack上で翻訳できるアプリ</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- [/l-global-nav] -->
+
+        <div class="l-contents">
+
+            <div class="l-breadcrumb sp-hide">
+                <ul class="l-breadcrumb__list">
+                    <li class="l-breadcrumb__item">
+                        <a href="/" class="l-breadcrumb__txt">Top</a>
+                    </li>
+                    <!-- <li class="l-breadcrumb__item">
+                    <a href="/products/" class="l-breadcrumb__txt">Products</a>
+                </li> -->
+                    <li class="l-breadcrumb__item">
+                        <span class="l-breadcrumb__txt">Party on Slack</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- [/l-breadcrumb] -->
+
+            <section class="c-section-2">
+
+                <div class="c-kv-2">
+                    <div class="c-kv-2__inner">
+                        <div class="c-kv-2__head">
+                            <h1 class="c-ttl-1">
+                                <span class="c-ttl-1__en">Party on Slack</span>
+                                <span class="c-ttl-1__ja">SlackでChatGPTと会話ができるアプリ</span>
+                            </h1>
+                            <div class="c-kv-2__img"><img src="/img/top/img_party_on_slack.webp" alt="Party on Slack">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- [/c-kv-2] -->
+
+                <div class="c-section-2__container">
+                    <div class="c-section-2__cassette">
+                        <section class="c-cassette-3">
+                            <div class="c-cassette-3__img">
+                                <div class="c-img c-img--app">
+                                    <img src="/img/products/img_app_party.jpg" alt="Party on Slack">
+                                </div>
+                                <!-- [/c-img] -->
+                            </div>
+                            <div class="c-cassette-3__inner">
+                                <div class="c-cassette-3__txt">
+                                    <div class="c-cassette-3__head">
+
+                                        <h2 class="c-ttl-2">Slackで仲間とコミュニケーションするようにAIを使う</h2>
+                                        <!-- [/c-ttl-2] -->
+                                    </div>
+                                </div>
+
+                                <div class="c-cassette-3__txt">
+
+                                    <p class="c-txt-1">
+                                        いつものSlackでコミュニケーションするようにAIとも会話できれば、ちょっとしたアイデア出しや資料の要約など、ビジネスの効率アップは間違いないです。<br>
+                                        あなたのSlackにもAIを参加させてみましょう。
+                                    </p>
+                                    <!-- [/c-txt-1] -->
+
+                                </div>
+
+                                <div class="c-cassette-3__btn">
+                                    <div class="c-cassette-3__btn-wrap">
+                                        <a href="https://slack.lne.st/gptparty/slack/install" target="_blank"
+                                            class="c-btn-2 btn-install-partyonslack">
+                                            <div class="c-btn-2__inner">
+                                                <span class="c-btn-2__txt">インストールはこちら</span>
+                                                <span class="c-btn-2__arr-outer">
+                                                    <span class="c-btn-2__arr">
+                                                        <img src="/img/common/icon_arrow.svg" alt="→">
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </a>
+                                        <!-- [/c-btn-2] -->
+                                        <a href="/terms/" class="c-btn-1">
+                                            <div class="c-btn-1__inner">
+                                                <span class="c-btn-1__txt">利用規約</span>
+                                                <span class="c-btn-1__arr-outer">
+                                                    <span class="c-btn-1__arr">
+                                                        <img src="/img/common/icon_arrow.svg" alt="→">
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </a>
+                                        <!-- [/c-btn-1] -->
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- [/c-cassette-3] -->
+
+                        <section class="c-cassette-3">
+                            <div class="c-cassette-3__inner">
+                                <div class="c-cassette-3__head">
+
+                                    <h2 class="c-ttl-2">主な特徴</h2>
+                                    <!-- [/c-ttl-2] -->
+
+                                </div>
+                                <div class="c-cassette-3__txt">
+                                    <ul class="c-list-4">
+                                        <li class="mgb-pc--20">SlackのUIでChatGPTと会話ができます。</li>
+                                        <li class="none-marker mgb-pc--20">「Party on
+                                            Slack」は、SlackのワークスペースにAI機能を統合させるアプリケーションです。</li>
+                                        <li class="none-marker">OpenAIのChatGPT
+                                            APIを利用し、Slack上でChatGPTなどの生成AIと直接自然なチャットが可能になります。</li>
+                                        <li class="none-marker mgb-pc--35">
+                                            このアプリを利用すると、タスクの自動化や、メッセージの要約、情報検索など、正確でスピーディーの高い回答を実現でき、アイデア出しや資料の要約など業務効率の向上が期待できます。
+                                        </li>
+                                        <li class="mgb-pc--20">OpenAI APIを利用するので、入力データを学習データとして取り込まれません。</li>
+                                        <li class="none-marker mgb-pc--20">
+                                            ChatGPTをWeb版で使う場合、オプトアウト設定をしないとOpenAIの学習データとして利用されてしまいますが、APIを経由することで学習データにはならないことが約束されています。
+                                        </li>
+                                        <li class="none-marker">加えて、Party on
+                                            Slackでは、ユーザーの皆さんの入力内容及びChatGPTからのレスポンスともにデータベースへの保存やログ出力を行いませんのでご安心ください。
+                                        </li>
+                                        <li class="none-marker mgb-pc--20">
+                                            エンベッディング機能により必要に応じて自社情報をPineconeに格納し、Slack上のChatGPTでその情報が活用できます。</li>
+                                        <li class="none-marker mgb-pc--20">多様なAIモデルの利用：OpenAIのChatGPTに加え、Google
+                                            Gemini、AnthropicのClaudeやStability AIのStable Diffusion、Azure OpenAI API、AWS
+                                            Bedrock API、Groq API、Nvidia API、PLaMo API など、複数の生成AIモデルに対応しています。</li>
+                                        <li class="none-marker mgb-pc--35">(Difyで作成したAI BOTもAPIを登録することで利用可能になります)</li>
+                                        <li class="mgb-pc--20">PDF/Wordファイルを要約することで資料を読み込む時間を短縮できます。</li>
+                                        <li class="none-marker mgb-pc--20">
+                                            PDFやWordファイルをアップロードし、AIが内容を要約することで、資料の理解を迅速化します。</li>
+                                        <li class="none-marker  mgb-pc--35">また音声ファイルを文字起こしして要約することもできます。</li>
+                                        <li class="mgb-pc--10">LLMとの対話で出力した内容をボタンひとつでSlack Canvasに出力できます。</li>
+                                    </ul>
+                                    <!-- [/c-list-4] -->
+
+                                </div>
+                            </div>
+                        </section>
+                        <!-- [/c-cassette-3] -->
+
+                        <section class="c-cassette-3">
+                            <div class="c-cassette-3__inner">
+                                <div class="c-cassette-3__head">
+
+                                    <h2 class="c-ttl-2">機能</h2>
+                                    <!-- [/c-ttl-2] -->
+
+                                </div>
+
+                                <div class="c-cassette-3__txt">
+                                    <h3 class="c-ttl-5">自然言語の対応</h3>
+                                    <p class="c-txt-1">・Slackチャンネルで「@Party on Slack」をメンションするだけでAIとの呼び出し会話を始めることができます。
+                                    </p>
+                                    <h3 class="c-ttl-5">Slackにきく</h3>
+                                    <p class="c-txt-1">・Slack内のメッセージを検索して、回答をLLM処理して投稿します。</p>
+                                    <h3 class="c-ttl-5">要約機能</h3>
+                                    <p class="c-txt-1">・PDFやWordファイル、SlackのスレッドをAIが要約します。</p>
+                                    <p class="c-txt-1">
+                                        PDFやWordファイル、ドキュメントをアップロードしたり、貼り付けた長文テキストの要約、また音声ファイルを文字起こしして要約します。</p>
+
+                                    <dl class="c-list-4">
+                                        <dt class="c-txt-1 fw-bold">現在の対応ファイル一覧</dt>
+                                        <dd class="c-txt-1">動画ファイル：mp4、mpeg、webm</dd>
+                                        <dd>音声ファイル：mp3、m4a、mpga、wav</dd>
+                                        <dd>文書ファイル：pdf、docx、txt、markdown、html</dd>
+                                        <dd>表計算ファイル：csv、xlsx</dd>
+                                        <dd>プレゼンテーションファイル： pptx</dd>
+                                        <dd>データファイル： json、xml、yaml</dd>
+                                    </dl>
+
+                                    <dl class="c-list-4 ">
+                                        <dt class="mgb-pc--10 c-txt-1 fw-bold">次のようなデータについてもAI処理できます：</dt>
+                                        <dd class="mgb-pc--10">・Googleスプレッドシートのデータを活用</dd>
+                                        <dd class="mgb-pc--10">・インターネット検索の情報を取り込み</dd>
+                                        <dd class="mgb-pc--10"></dd>・Slackの会話内容を基に分析</dd>
+                                    </dl>
+
+                                    <h3 class="c-ttl-5">エンベッティング機能</h3>
+                                    <p class="c-txt-1">・自社情報をPinecone に格納することで、ChatGPTが自社の情報も活用してくれます。</p>
+                                    <h3 class="c-ttl-5">音声を文字起こし</h3>
+                                    <p class="c-txt-1">・Slackで行われた会議や音声データを文字化し、議事録として利用できます。
+                                    </p>
+                                    <h3 class="c-ttl-5">画像生成機能</h3>
+                                    <p class="c-txt-1">・dall-e、Stable Diffusionが利用可能で、そこから画像を生成することができます。</p>
+                                    <h3 class="c-ttl-5">RSSコンシェルジュ</h3>
+                                    <p class="c-txt-1">・RSS feedのURLを登録すると、定期的に新規記事をLLM処理し、チャンネルに投稿します。</p>
+                                    <h3 class="c-ttl-5">スケジュール調整</h3>
+                                    <p class="c-txt-1">
+                                        ・Googleカレンダーを調べて時間調整をすることが出来ます。調整したい人と調整する期間を選択することでスケジュール調整ができます。</p>
+                                    <h3 class="c-ttl-5">Slack Canvasへの出力機能</h3>
+                                    <p class="c-txt-1">・LLMとの対話で出力した内容を、ボタンひとつでSlack
+                                        Canvasに出力することができます。<br>コピペせずともレポートが手に入る時代の到来です。</p>
+                                    <h3 class="c-ttl-5">カスタマイズ可能なキャラクター</h3>
+                                    <p class="c-txt-1">・AIの口調や個性を設定して、団体に合わせた実用的な返答を構築できます。</p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="c-cassette-3__btn">
+                                <div class="c-cassette-3__btn-wrap">
+                                    <a href="https://slack.lne.st/gptparty/slack/install" target="_blank"
+                                        class="c-btn-2 btn-install-partyonslack">
+                                        <div class="c-btn-2__inner">
+                                            <span class="c-btn-2__txt">インストールはこちら</span>
+                                            <span class="c-btn-2__arr-outer">
+                                                <span class="c-btn-2__arr">
+                                                    <img src="/img/common/icon_arrow.svg" alt="→">
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </a>
+                                    <!-- [/c-btn-2] -->
+                                    <a href="/terms/" class="c-btn-1">
+                                        <div class="c-btn-1__inner">
+                                            <span class="c-btn-1__txt">利用規約</span>
+                                            <span class="c-btn-1__arr-outer">
+                                                <span class="c-btn-1__arr">
+                                                    <img src="/img/common/icon_arrow.svg" alt="→">
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </a>
+                                    <!-- [/c-btn-1] -->
+                                </div>
+                            </div>
+
+
+
+                        </section>
+                        <!-- [/c-cassette-3] -->
+
+                        <!-- [/c-cassette-3] -->
+
+                        <section class="c-cassette-3">
+                            <div class="c-cassette-3__inner">
+                                <div class="c-cassette-3__head">
+
+                                    <h2 class="c-ttl-2">ChatGPTをセキュアに使いたいならParty on Slack</h2>
+                                    <!-- [/c-ttl-2] -->
+
+                                </div>
+
+                                <div class="c-cassette-3__txt">
+                                    <p class="c-txt-1">
+                                        ChatGPTをWeb版で使う場合、オプトアウト設定をしないとOpenAIの学習データとして利用されてしまいますが、APIを経由することで<span
+                                            class="emphasize-text">学習データにはならないことが約束されています</span>。</p>
+                                    <p class="c-txt-1">加えて、Party on Slackでは、ユーザーの皆さんの入力内容及びChatGPTからのレスポンスともに<span
+                                            class="emphasize-text">データベースへの保存やログ出力を行いません</span>。プログラム上を情報が通過していきますが、これを横から閲覧するということはありませんのでご安心ください。
+                                    </p>
+                                    <h3 class="c-ttl-5">それでも不安な場合は…</h3>
+                                    <p class="c-txt-1">
+                                        そうは言っても、これは口約束です。利用に不安があるな、しっかり契約で縛っておきたいなという場合はご安心ください。サポート契約を結ぶ事ができます。詳細につきましては、アプリのホーム画面の問い合わせボタン、または以下のボタン(リバネスナレッジお問い合わせフォーム)よりお問い合わせください。
+                                    </p>
+
+                                    <div class="c-cassette-1__btn">
+
+                                        <a href="https://k.lne.st/contact-us/" target="_blank"
+                                            class="c-btn-2 btn-contact-k">
+                                            <div class="c-btn-2__inner">
+                                                <span class="c-btn-2__txt">お問い合わせ</span>
+                                                <span class="c-btn-2__arr-outer">
+                                                    <span class="c-btn-2__arr">
+                                                        <img src="/img/common/icon_arrow.svg" alt="→">
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </a>
+                                        <!-- [/c-btn-2] -->
+
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+                        </section>
+                        <!-- [/c-cassette-3] -->
+                        <section class="c-cassette-3">
+                            <div class="c-cassette-3__inner">
+                                <div class="c-cassette-3__head">
+
+                                    <h2 class="c-ttl-2">プランと価格について</h2>
+                                    <!-- [/c-ttl-2] -->
+
+                                </div>
+                                <div class="c-cassette-3__txt">
+                                    <ul class="c-list-4">
+                                        <li class="none-marker mgb-pc--20">
+                                            Functionsで提供するアプリの利用料は、使ってみないと効果が見えないという理由から、基本的に無料で使用できます</li>
+                                        <li class="none-marker mgb-pc--0">一方で、※特定の機能の利用及びサポートプランは有料となっております</li>
+                                        <li class="none-marker mgb-pc--20">(<a
+                                                href="https://functions.lne.st/products/timeline/"><span
+                                                    class="emphasize-text">※特定機能：TimeLineについて</span></a>) </li>
+                                        <li class="none-marker mgb-pc--10">
+                                            サポートプランは無料利用と違い、秘密保持契約を結んだ上でご利用いただけますので、業務上の機密情報を共有した状態で相談することが可能になります</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- [/c-cassette-3] -->
+                    </div>
+                </div>
+
+                <div class="c-block-2">
+                    <div class="c-block-2__inner">
+                        <div class="c-cassette-3">
+                            <div class="c-cassette-3__inner">
+                                <div class="c-cassette-3__btn">
+                                    <div class="c-cassette-3__btn-wrap">
+                                        <a href="https://slack.lne.st/gptparty/slack/install" target="_blank"
+                                            class="c-btn-2 btn-install-partyonslack">
+                                            <div class="c-btn-2__inner">
+                                                <span class="c-btn-2__txt">インストールはこちら</span>
+                                                <span class="c-btn-2__arr-outer">
+                                                    <span class="c-btn-2__arr">
+                                                        <img src="/img/common/icon_arrow.svg" alt="→">
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </a>
+                                        <!-- [/c-btn-2] -->
+                                        <a href="/terms/" class="c-btn-1">
+                                            <div class="c-btn-1__inner">
+                                                <span class="c-btn-1__txt">利用規約</span>
+                                                <span class="c-btn-1__arr-outer">
+                                                    <span class="c-btn-1__arr">
+                                                        <img src="/img/common/icon_arrow.svg" alt="→">
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </a>
+                                        <!-- [/c-btn-1] -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- [/c-cassette-3] -->
+                    </div>
+                </div>
+                <!-- [/c-block-2] -->
+
+            </section>
+            <!-- [/c-section-2] -->
 
         </div>
-    </footer>
-    <!-- [/l-footer] -->
+        <!-- [/l-contents] -->
 
-</div>
-<!-- [/l-wrapper] -->
+        <div class="l-footer-pagetop">
+            <a href="#" class="l-footer-pagetop__link">
+                <span class="l-footer-pagetop__txt">TOP</span>
+            </a>
+        </div>
+        <!-- [/l-footer-pagetop] -->
 
-<!-- scripts -->
-<script src="/js/lib/lib.js"></script>
-<script src="/js/common.js"></script>
+        <footer class="l-footer">
+            <div class="l-footer__container">
+                <p class="l-footer__logo">
+                    <a href="/" class="l-footer__logo-link">
+                        <img src="/img/common/logo_functions-from-l.png" alt="Functions from L">
+                    </a>
+                </p>
+
+                <nav class="l-footer-nav">
+                    <ul class="l-footer-nav__list">
+                        <li class="l-footer-nav__item">
+                            <a href="https://k.lne.st/" target="_blank" class="l-footer-nav__link">運営会社につい<span
+                                    class="link-blank">て</span></a>
+                        </li>
+                        <li class="l-footer-nav__item">
+                            <a href="/terms/" class="l-footer-nav__link">利用規約</a>
+                        </li>
+                        <li class="l-footer-nav__item">
+                            <a href="https://k.lne.st/privacy/" target="_blank"
+                                class="l-footer-nav__link">プライバシーポリシ<span class="link-blank">ー</span></a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- [/l-footer-nav] -->
+
+                <div class="l-footer-lower">
+                    <div class="l-footer-lower__copyright">
+                        <small class="l-footer-lower__copyright-txt">&copy; Functions from L - serviced by</small>
+                    </div>
+                    <p class="l-footer-lower__logo">
+                        <a href="https://k.lne.st/" target="_blank" class="l-footer-lower__logo-link">
+                            <img src="/img/common/logo_leave-a-nest.png" alt="Leave a Nest KNOWLEDGE">
+                        </a>
+                    </p>
+                </div>
+                <!-- [/l-footer-lower] -->
+
+            </div>
+        </footer>
+        <!-- [/l-footer] -->
+
+    </div>
+    <!-- [/l-wrapper] -->
+
+    <!-- scripts -->
+    <script src="/js/lib/lib.js"></script>
+    <script src="/js/common.js"></script>
 </body>
+
 </html>
