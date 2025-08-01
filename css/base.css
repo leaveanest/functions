@@ -170,6 +170,18 @@ a {
     text-decoration: none;
     outline: none;
 }
+
+/* 特定のリンクにアンダーラインを表示 */
+a.underline-link {
+    text-decoration: underline;
+}
+
+a.underline-link:hover {
+    text-decoration: underline;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
 .btn-install-timeline, .btn-install-partyonslack, .btn-install-tasukaru, .btn-install-oyasumibot, .btn-install-tips, .btn-install-yokoku, .btn-install-salesforceconnector, .btn-install-deepltranslator, .btn-k-contact-us { 
     display: block; /* ブロック要素化 */
     pointer-events: auto; /* ポインターイベントを有効化 */
