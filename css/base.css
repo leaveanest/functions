@@ -1,7 +1,9 @@
 /* ---------------------------------------------
 *   Universal selector
 --------------------------------------------- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -20,23 +22,25 @@
     overflow: hidden !important;
     border-radius: 5px;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.0);
-    height: 200px !important; /* 表示領域の高さ */
+    height: 200px !important;
+    /* 表示領域の高さ */
 }
 
-div.news-container div.news-box div.c-block-1__link div.c-cassette-3__txt{
+div.news-container div.news-box div.c-block-1__link div.c-cassette-3__txt {
     margin: 0;
     font-size: 12px;
     padding-left: 20px;
 }
 
-body div.news-container div.news-box div.c-block-1__link div.c-cassette-3__txt span.c-block-1__link-txt--news{
+body div.news-container div.news-box div.c-block-1__link div.c-cassette-3__txt span.c-block-1__link-txt--news {
     margin: 0;
     padding-left: 20px;
 }
 
 .news-box {
     height: 100%;
-    overflow-y: auto; /* ← 手動スクロールを可能に */
+    overflow-y: auto;
+    /* ← 手動スクロールを可能に */
     padding: 10px;
 }
 
@@ -67,6 +71,7 @@ body div.news-container div.news-box div.c-block-1__link div.c-cassette-3__txt s
     --bluish-purple2-shadow: 0 10px 60px 0 rgba(76, 73, 166, .15);
     --bluish-purple2-shadow-s: 0 10px 30px 0 rgba(76, 73, 166, .15);
 }
+
 @media screen and (max-width: 750px) {
     :root {
         --fixed-header-height: 56px;
@@ -89,30 +94,31 @@ body {
 
 .pricing_tb {
     border: 2px solid #ccc;
-    
+
 }
-.pricing_tb tr{
+
+.pricing_tb tr {
     border: 1px solid #ccc;
 }
 
-.pricing_tb td{
+.pricing_tb td {
     border: 1px solid #ccc;
 }
 
-.pricing_tb tbody{
+.pricing_tb tbody {
     padding: px;
 }
 
 
-.table-second-center td:nth-child(n+2){
+.table-second-center td:nth-child(n+2) {
     text-align: center;
     color: #635FD9;
     font-size: 11px;
     padding: 11px;
-  }
+}
 
-.pricing_tb_th th{
-    background-color:#f3f3fd;
+.pricing_tb_th th {
+    background-color: #f3f3fd;
     text-align: center;
     color: #635FD9;
     font-size: 11px;
@@ -121,19 +127,21 @@ body {
     font-weight: bold;
     width: 100%;
 }
-.table-first-center td:first-child{
+
+.table-first-center td:first-child {
     text-align: left;
     font-size: 10px;
     padding: 5px;
-    
-  }
 
-span.emphasize-text{
+}
+
+span.emphasize-text {
     color: #67176f;
     font-weight: bold;
 }
 
 @media screen and (max-width: 750px) {
+
     html,
     body {
         font-size: 1rem;
@@ -148,12 +156,14 @@ html.is-noscroll {
 body {
     line-height: 1.5;
 }
+
 @media screen and (max-width: 750px) {
     body {
         line-height: 1.5;
         min-width: 320px;
     }
 }
+
 .is-noscroll body {
     position: fixed;
     width: 100%;
@@ -173,43 +183,62 @@ a {
 
 /* 特定のリンクにアンダーラインを表示 */
 a.underline-link {
-    text-decoration: underline;
+    text-decoration: underline !important;
 }
 
 a.underline-link:hover {
-    text-decoration: underline;
+    text-decoration: underline !important;
     opacity: 0.7;
     transition: opacity 0.3s ease;
 }
 
-.btn-install-timeline, .btn-install-partyonslack, .btn-install-tasukaru, .btn-install-oyasumibot, .btn-install-tips, .btn-install-yokoku, .btn-install-salesforceconnector, .btn-install-deepltranslator, .btn-k-contact-us { 
-    display: block; /* ブロック要素化 */
-    pointer-events: auto; /* ポインターイベントを有効化 */
-  }
- .btn-install-timeline:hover, .btn-install-partyonslack:hover, .btn-install-tasukaru:hover, .btn-install-oyasumibot:hover, .btn-install-tips:hover, .btn-install-yokoku:hover, .btn-install-salesforceconnector:hover, .btn-install-deepltranslator:hover, .btn-k-contact-us:hover {
+.btn-install-timeline,
+.btn-install-partyonslack,
+.btn-install-tasukaru,
+.btn-install-oyasumibot,
+.btn-install-tips,
+.btn-install-yokoku,
+.btn-install-salesforceconnector,
+.btn-install-deepltranslator,
+.btn-k-contact-us {
+    display: block;
+    /* ブロック要素化 */
+    pointer-events: auto;
+    /* ポインターイベントを有効化 */
+}
+
+.btn-install-timeline:hover,
+.btn-install-partyonslack:hover,
+.btn-install-tasukaru:hover,
+.btn-install-oyasumibot:hover,
+.btn-install-tips:hover,
+.btn-install-yokoku:hover,
+.btn-install-salesforceconnector:hover,
+.btn-install-deepltranslator:hover,
+.btn-k-contact-us:hover {
     opacity: 0.7;
     transition: 0.5s;
 }
 
-  .btn-contact-k > div, 
-  .btn-contact-k > div > span, 
-  .btn-install-timeline > div, 
-  .btn-install-timeline > div > span, 
-  .btn-install-partyonslack > div, 
-  .btn-install-partyonslack > div > span, 
-  .btn-install-tasukaru > div, 
-  .btn-install-tasukaru > div > span, 
-  .btn-install-oyasumibot > div, 
-  .btn-install-oyasumibot > div > span, 
-  .btn-install-tips > div, 
-  .btn-install-tips > div > span, 
-  .btn-install-yokoku > div, 
-  .btn-install-yokoku > div > span, 
-  .btn-install-salesforceconnector > div, 
-  .btn-install-salesforceconnector > div > span, 
-  .btn-install-deepltranslator > div, 
-  .btn-install-deepltranslator > div > span {
-  pointer-events: none;
+.btn-contact-k>div,
+.btn-contact-k>div>span,
+.btn-install-timeline>div,
+.btn-install-timeline>div>span,
+.btn-install-partyonslack>div,
+.btn-install-partyonslack>div>span,
+.btn-install-tasukaru>div,
+.btn-install-tasukaru>div>span,
+.btn-install-oyasumibot>div,
+.btn-install-oyasumibot>div>span,
+.btn-install-tips>div,
+.btn-install-tips>div>span,
+.btn-install-yokoku>div,
+.btn-install-yokoku>div>span,
+.btn-install-salesforceconnector>div,
+.btn-install-salesforceconnector>div>span,
+.btn-install-deepltranslator>div,
+.btn-install-deepltranslator>div>span {
+    pointer-events: none;
 }
 
 /* ---------------------------------------------
@@ -225,7 +254,8 @@ picture img {
     height: auto;
 }
 
-p.tl-img,.tl-img img {
+p.tl-img,
+.tl-img img {
     width: 100%;
     height: auto;
     margin-bottom: 30px;
@@ -245,6 +275,7 @@ hr[id^=anchor-] {
     background: 0;
     pointer-events: none;
 }
+
 @media screen and (max-width: 750px) {
     hr[id^=anchor-] {
         padding-top: 56px;
@@ -268,42 +299,46 @@ hr[id^=anchor-] {
         overflow: hidden;
         border-radius: 5px;
         box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.0);
-        height: 200px; /* 表示領域の高さ */
+        height: 200px;
+        /* 表示領域の高さ */
     }
-    
-    body div.news-container div.news-box div.c-block-1__link div.c-cassette-3__txt span.c-block-1__link-txt{
+
+    body div.news-container div.news-box div.c-block-1__link div.c-cassette-3__txt span.c-block-1__link-txt {
         margin: 0;
         font-size: 10px;
         padding-left: 0px;
     }
-    body div.news-container div.news-box div.c-block-1__link div.c-cassette-3__txt span.c-block-1__link-txt--news{
+
+    body div.news-container div.news-box div.c-block-1__link div.c-cassette-3__txt span.c-block-1__link-txt--news {
         margin: 0;
         font-size: 10px;
         padding-left: 0px;
     }
-    div.news-container div.news-box div.c-block-1__link div.c-cassette-3__txt{
+
+    div.news-container div.news-box div.c-block-1__link div.c-cassette-3__txt {
         padding-left: 0px;
     }
-    
+
     .news-box {
         height: 100%;
-        overflow-y: auto; /* ← 手動スクロールを可能に */
+        overflow-y: auto;
+        /* ← 手動スクロールを可能に */
         padding: 0px;
     }
-    
+
     .news-box ul {
         list-style: none;
         padding: 0;
         margin: 0;
     }
-    
+
     .news-box li {
         padding: 8px;
         border-bottom: 1px solid #eee;
         white-space: nowrap;
         margin: 0;
     }
-    
+
     .news-box li:last-child {
         border-bottom: none;
     }
