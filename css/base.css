@@ -183,6 +183,16 @@ a {
 
 /* 特定のリンクにアンダーラインを表示 */
 a.underline-link {
+    text-decoration: underline;
+}
+
+a.underline-link:hover {
+    text-decoration: underline;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+a.underline-link {
     text-decoration: underline !important;
 }
 
