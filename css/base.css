@@ -234,6 +234,40 @@ li.underline-link a.underline-link:hover {
     transition: opacity 0.3s ease;
 }
 
+/* 本番環境での確実なアンダーライン表示のための追加ルール */
+li.none-marker.mgb-pc--20.underline-link a.underline-link {
+    text-decoration: underline !important;
+    text-decoration-color: currentColor !important;
+    text-decoration-thickness: 1px !important;
+    text-underline-offset: 2px !important;
+}
+
+li.none-marker.mgb-pc--20.underline-link a.underline-link:hover {
+    text-decoration: underline !important;
+    text-decoration-color: currentColor !important;
+    text-decoration-thickness: 1px !important;
+    text-underline-offset: 2px !important;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+/* 最も強力なセレクタ - 本番環境での確実な表示 */
+body li.none-marker.mgb-pc--20.underline-link a.underline-link {
+    text-decoration: underline !important;
+    text-decoration-color: currentColor !important;
+    text-decoration-thickness: 1px !important;
+    text-underline-offset: 2px !important;
+}
+
+body li.none-marker.mgb-pc--20.underline-link a.underline-link:hover {
+    text-decoration: underline !important;
+    text-decoration-color: currentColor !important;
+    text-decoration-thickness: 1px !important;
+    text-underline-offset: 2px !important;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
 .btn-install-timeline,
 .btn-install-partyonslack,
 .btn-install-tasukaru,
@@ -384,4 +418,38 @@ hr[id^=anchor-] {
     .news-box li:last-child {
         border-bottom: none;
     }
+}
+
+/* 本番環境での確実なアンダーライン表示 - 最終的な強制ルール */
+html body li.none-marker.mgb-pc--20.underline-link a.underline-link {
+    text-decoration: underline !important;
+    text-decoration-color: currentColor !important;
+    text-decoration-thickness: 1px !important;
+    text-underline-offset: 2px !important;
+}
+
+html body li.none-marker.mgb-pc--20.underline-link a.underline-link:hover {
+    text-decoration: underline !important;
+    text-decoration-color: currentColor !important;
+    text-decoration-thickness: 1px !important;
+    text-underline-offset: 2px !important;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+/* 最も強力なセレクタ - すべての環境で確実に動作 */
+html body li.none-marker.mgb-pc--20.underline-link a.underline-link[href] {
+    text-decoration: underline !important;
+    text-decoration-color: currentColor !important;
+    text-decoration-thickness: 1px !important;
+    text-underline-offset: 2px !important;
+}
+
+html body li.none-marker.mgb-pc--20.underline-link a.underline-link[href]:hover {
+    text-decoration: underline !important;
+    text-decoration-color: currentColor !important;
+    text-decoration-thickness: 1px !important;
+    text-underline-offset: 2px !important;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
 }
