@@ -2079,6 +2079,9 @@
     text-decoration: none;
     color: inherit;
 }
+.c-article-card--horizontal .c-article-card__link {
+    display: flex !important;
+}
 .c-article-card__thumbnail {
     position: relative;
     width: 100%;
