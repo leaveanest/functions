@@ -948,6 +948,40 @@
 .c-btn-2__arr img {
     width: 100%;
 }
+.c-btn-2--appstore {
+    display: inline-block;
+    max-width: none;
+    padding: 0;
+}
+@media screen and (max-width: 750px) {
+    .c-btn-2--appstore {
+        width: auto;
+    }
+}
+.c-btn-2--appstore .c-btn-2__inner {
+    justify-content: center;
+    width: auto;
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: transparent;
+}
+.c-btn-2--appstore .c-btn-2__badge {
+    display: block;
+}
+.c-btn-2--appstore .c-btn-2__badge img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.c-btn-2--appstore .c-btn-2__arr-outer {
+    display: none;
+}
+.c-btn-2--appstore .c-btn-2__txt {
+    display: none;
+}
 
 /* ---------------------------------------------
 *   c-card
@@ -1325,6 +1359,39 @@
         width: 46.9444444444%;
     }
 }
+.c-cassette-3__btn-wrap--single {
+    justify-content: center;
+    gap: 0;
+}
+@media screen and (max-width: 750px) {
+    .c-cassette-3__btn-wrap--single .c-btn-1,
+    .c-cassette-3__btn-wrap--single .c-btn-2 {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 751px) {
+    .c-cassette-3__btn-wrap--single .c-btn-1,
+    .c-cassette-3__btn-wrap--single .c-btn-2 {
+        width: 320px;
+    }
+}
+.c-cassette-3__note {
+    margin-top: 24px;
+    text-align: center;
+}
+@media screen and (max-width: 750px) {
+    .c-cassette-3__note {
+        margin-top: 6.4vw;
+    }
+}
+.c-cassette-3__note br {
+    display: none;
+}
+@media screen and (max-width: 750px) {
+    .c-cassette-3__note br {
+        display: block;
+    }
+}
 .c-cassette-3__btn-wrap .c-btn-1__inner,
 .c-cassette-3__btn-wrap .c-btn-2__inner {
     gap: 0 4px;
@@ -1441,6 +1508,15 @@
 @media screen and (max-width: 750px) {
     .c-kv-2__head {
         padding: 0;
+    }
+}
+.c-kv-2__lead {
+    margin-top: 24px;
+    text-align: center;
+}
+@media screen and (max-width: 750px) {
+    .c-kv-2__lead {
+        margin-top: 4.2666666667vw;
     }
 }
 .c-kv-2__img {
