@@ -7,7 +7,7 @@
 <meta name="format-detection" content="telephone=no">
 
 <!-- meta description -->
-<meta name="description" content="SessionSaveはmacOS / iOS向けのライブ文字起こしアプリ。Googleアカウントでサインインし、議事録や録音データをGoogle Driveに保存・共有できます。">
+<meta name="description" content="SessionSaveはmacOS / iOS向けのライブ文字起こしアプリ。Googleアカウントでサインインし、Googleカレンダーの予定を取り込んでセッション開始を支援します。">
 
 <!-- title -->
 <title>SessionSave紹介｜プロダクト｜Functions from L</title>
@@ -19,7 +19,7 @@
 <meta property="og:url" content="https://functions.lne.st/products/SessionSave/">
 <meta property="og:image" content="https://functions.lne.st/img/ogp.png">
 <meta property="og:site_name" content="Functions from L">
-<meta property="og:description" content="SessionSaveはmacOS / iOS向けのライブ文字起こしアプリ。Googleアカウントでサインインし、議事録や録音データをGoogle Driveに保存・共有できます。">
+<meta property="og:description" content="SessionSaveはmacOS / iOS向けのライブ文字起こしアプリ。Googleアカウントでサインインし、Googleカレンダーの予定を取り込んでセッション開始を支援します。">
 <meta name="twitter:card" content="summary">
 
 <!-- favicon / apple-touch-icon -->
@@ -156,7 +156,7 @@
                             <span class="c-ttl-1__en">SessionSave</span>
                             <span class="c-ttl-1__ja">カンファレンスの記録をスマートに</span>
                         </h1>
-                        <p class="c-txt-1 c-kv-2__lead">macOS / iOS に対応したライブ文字起こしアシスタント。マイク・システム音声・動画撮影をひとつのアプリで管理し、Apple Speech を最大限に活用します。Google アカウントでサインインし、議事録データの保存や共有を自動化するために Google OAuth を利用します。</p>
+                        <p class="c-txt-1 c-kv-2__lead">macOS / iOS に対応したライブ文字起こしアシスタント。マイク・システム音声・動画撮影をひとつのアプリで管理し、Apple Speech を最大限に活用します。Google アカウントでサインインし、予定情報を取り込んでセッションの準備を素早く整えるために Google OAuth を利用します。</p>
                     </div>
                     <div class="c-kv-2__img">
                         <img src="/img/products/img_sessionsave_kv.png" alt="SessionSave">
@@ -177,10 +177,10 @@
                             <div class="c-cassette-3__txt">
                                 <p class="c-txt-1">SessionSaveは、カンファレンスやハイブリッド会議の現場で求められる “話す・聞く・記録する” を一元化したアプリです。低負荷で安定した文字起こしを維持しながら、音声・画面・動画の収録、翻訳や要約までをワークフローに組み込みます。</p>
                                 <h3 class="c-ttl-5">Google OAuth 連携の利用目的</h3>
-                                <p class="c-txt-1">SessionSave は Google OAuth 2.0 による認証を採用し、Google アカウントでログインしたユーザー本人のためにデータを扱います。OAuth 連携は、議事録や関連ファイルを安全に保管し、必要なメンバーと共有できるようにするための仕組みです。</p>
+                                <p class="c-txt-1">SessionSave は Google OAuth 2.0 による認証を採用し、Google アカウントでログインしたユーザー本人のためにデータを扱います。OAuth 連携は、Google カレンダーの予定を SessionSave のカレンダー機能に取り込み、セッションの開始準備をスムーズにするための仕組みです。</p>
                                 <ul class="c-list-4">
-                                    <li>アクセスする Google データ：ユーザーの基本プロフィールと、ユーザーが保存先に指定した Google Drive フォルダ。</li>
-                                    <li>利用目的：録音ファイルや文字起こし・要約データをユーザー本人の Google Drive に保存し、複数デバイスやチームで再利用できるようにするため。</li>
+                                    <li>アクセスする Google データ：ユーザーの基本プロフィールと、ユーザーがアクセス権を付与した Google カレンダーの予定情報。</li>
+                                    <li>利用目的：取得した予定を SessionSave のカレンダーに反映し、関連セッションの作成や開始時刻の管理を簡単にするため。</li>
                                     <li>データ共有：取得した情報は第三者と共有せず、ユーザーが明示的に選択した操作にのみ利用します。</li>
                                 </ul>
                                 <p class="c-txt-1">SessionSave がリクエストする権限は機能提供に必要な最小限であり、Google アカウントの権限管理画面からいつでも連携を解除できます。</p>
