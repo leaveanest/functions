@@ -453,3 +453,50 @@ html body li.none-marker.mgb-pc--20.underline-link a.underline-link[href]:hover 
     opacity: 0.7;
     transition: opacity 0.3s ease;
 }
+
+                            /* FAQ 全体 */
+                            .faq-section {
+                                background: #fff;
+                                padding: 0px 20px;
+                                border-top: 0px solid #e0e0e0;
+                              }
+                              
+                              /* 見出し */
+                              .faq-section .faq-header {
+                                font-size: 1.6rem;
+                                font-weight: 700;
+                                margin-bottom: 40px;
+                                color: #222;
+                              }
+                              
+                              /* 質問 */
+                              .faq-question {
+                                font-size: 1.15rem;
+                                font-weight: 600;
+                                margin: 20px 0 8px;
+                                color: #333;
+                              }
+                              
+                              /* 回答 */
+                              .faq-answer {
+                                margin-bottom: 26px;
+                                font-size: 1rem;
+                                color: #555;
+                                line-height: 1.7;
+                              }
+                              
+                              /* スマホ対応 */
+                              @media (max-width: 768px) {
+                                .faq-section {
+                                  padding: 0px 16px;
+                                }
+                                .faq-header {
+                                  font-size: 1.4rem;
+                                }
+                                .faq-question {
+                                  font-size: 1.05rem;
+                                }
+                                .faq-answer {
+                                  font-size: 0.95rem;
+                                }
+                              }
