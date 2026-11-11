@@ -10,6 +10,11 @@ is not needed on Cloudflare Pages.
 - Build output directory: `dist`
 - Production domain: `functions.lne.st`
 - DNS zone `lne.st`: managed separately in `info@lne.st`'s account
+- DNS record: `functions` CNAME `functions-lk.pages.dev`, DNS only, automatic TTL
+
+Use DNS only for this cross-account CNAME; the destination is still served by
+Cloudflare Pages over HTTPS. A proxied cross-account record returned error 1014
+during migration.
 
 `build_cloudflare.py` copies the public HTML, CSS, JavaScript and assets only.
 It excludes PHP, Composer files, editor settings, development notes and Git

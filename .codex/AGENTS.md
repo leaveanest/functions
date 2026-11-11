@@ -8,7 +8,9 @@
   - https://functions.lne.st/
 - Githubリポジトリはこちら
   - https://github.com/leaveanest/functions
-    - mainにマージするとHeroku上で更新がかかり自動的にサイトが更新されます
+    - mainへのpushでCloudflare Pagesの `functions-lk` に自動配備されます
+    - 配備先は ask@k.lne.st、lne.st のDNS管理は info@lne.st のCloudflareアカウントです
+    - ビルドは `python3 build_cloudflare.py`、公開ディレクトリは `dist` です
 
 ## サイト構成
 - シンプルなHTMLです。CMSは使っていません
