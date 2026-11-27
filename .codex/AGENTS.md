@@ -13,7 +13,8 @@
     - ビルドは `python3 build_cloudflare.py`、公開ディレクトリは `dist` です
 
 ## サイト構成
-- シンプルなHTMLです。CMSは使っていません
+- 2026年11月27日に製品案内サイトを閉鎖。Cloudflare Pages はすべての旧URLを https://k.lne.st/service/ へ301転送します。静的な原稿は履歴用です。
+- 本番用ビルドには転送規則だけを含め、プレビューでトップ、旧製品URL、旧JSの転送先を確認してください。
 
 ## テストについて
 - http://localhost:8000/index.html

@@ -1,31 +1,7 @@
-# Cloudflare deployment
+# Functions from L 製品案内サイト
 
-The public website is a static site. `index.php` only includes `index.html` and
-is not needed on Cloudflare Pages.
+2026年11月27日の公開終了に伴い、https://functions.lne.st/ のすべてのパスを https://k.lne.st/service/ に301転送する。製品ページ、料金、利用規約、旧静的資産への直接アクセスにも同じ転送を適用する。
 
-- GitHub: `leaveanest/functions`, production branch `main`
-- Cloudflare Pages project: `functions-lk`
-- Hosting account: `ask@k.lne.st` (`dd4e70f6e77582fb6206a57ea20c0642`)
-- Build command: `python3 build_cloudflare.py`
-- Build output directory: `dist`
-- Production domain: `functions.lne.st`
-- DNS zone `lne.st`: managed separately in `info@lne.st`'s account
-- DNS record: `functions` CNAME `functions-lk.pages.dev`, DNS only, automatic TTL
+Cloudflare Pages の `functions-lk` は `main` への push で `python3 build_cloudflare.py` を実行し、`dist/_redirects` を配備する。ホスティングは ask@k.lne.st、lne.st の DNS は info@lne.st で管理する。
 
-Use DNS only for this cross-account CNAME; the destination is still served by
-Cloudflare Pages over HTTPS. A proxied cross-account record returned error 1014
-during migration.
-
-`build_cloudflare.py` copies the public HTML, CSS, JavaScript and assets only.
-It excludes PHP, Composer files, editor settings, development notes and Git
-metadata. It preserves the existing static content and Google Tag Manager.
-The previous `/index.php` entry point redirects to `/`; unknown routes return
-404 rather than the homepage.
-
-For manual deployment after a build, select the verified `ask@k.lne.st`
-Wrangler profile and deploy `dist` to project `functions-lk`, branch `main`.
-
-The previous Heroku DNS target was
-`shaped-fox-r87j5k732aav677kqzm82d00.herokudns.com` (proxied, automatic TTL).
-Keep the Heroku app available until the Cloudflare deployment and domain are
-verified. The DNS zone must stay in the `info@lne.st` account.
+再公開が必要な場合はこの変更を revert して再配備する。直前の本番ソースは `2ad69e1b939ad9bacdced59e2421f5943cfca600`。
