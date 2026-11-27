@@ -12,7 +12,7 @@
 *   <body>クラス設定
 --------------------------------------------- */
 /**
- * <body>要素に、ユーザーのOS・デバイスとブラウザ等に関数情報をクラスとして付与する
+ * <body>要素に、ユーザーのOS・デバイスとブラウザを表すクラスを付与する
  * OS・デバイス: iphone, ipad, android, androidphone, androidtablet, windows, mac
  * ブラウザ: ie, edge, chrome, firefox, safari
  */
@@ -20,50 +20,38 @@ $(function () {
     'use strict';
 
     $('body').addClass(function () {
-        const ua = window.navigator.userAgent.toLowerCase();
-        let bodyClasses = '';
+        const ua = navigator.userAgent;
+        const classes = [];
 
         // プラットフォーム判定
-        if (is.ios()) {
-            if (is.iphone()) {
-                bodyClasses += ' iphone';
-            } else if (is.ipad()) {
-                bodyClasses += ' ipad';
-            }
-        } else if (ua.indexOf('macintosh') > -1 && 'ontouchend' in document) {
-            bodyClasses += ' ipad';
-        } else if (is.android()) {
-            bodyClasses += ' android';
-
-            if (is.androidPhone()) {
-                bodyClasses += ' androidphone';
-            } else if (is.androidTablet()) {
-                bodyClasses += ' androidtablet';
-            }
-        } else if (is.windows()) {
-            bodyClasses += ' windows';
-        } else if (is.mac()) {
-            bodyClasses += ' mac';
+        if (/iPhone/i.test(ua)) {
+            classes.push('iphone');
+        } else if (/iPad/i.test(ua) || (/Macintosh/i.test(ua) && (navigator.maxTouchPoints > 1 || 'ontouchend' in document))) {
+            classes.push('ipad');
+        } else if (/Android/i.test(ua)) {
+            classes.push('android', /Mobile/i.test(ua) ? 'androidphone' : 'androidtablet');
+        } else if (/Windows/i.test(ua)) {
+            classes.push('windows');
+        } else if (/Macintosh/i.test(ua)) {
+            classes.push('mac');
         }
 
         // ブラウザ判定
-        if (is.ie()) {
-            bodyClasses += ' ie';
-
-            if (is.ie(11)) {
-                bodyClasses += ' ie11';
-            }
-        } else if (is.edge() || ua.indexOf('edg') > -1) {
-            bodyClasses += ' edge';
-        } else if (is.chrome() || ua.indexOf('crios') > -1) {
-            bodyClasses += ' chrome';
-        } else if (is.firefox()) {
-            bodyClasses += ' firefox';
-        } else if (is.safari()) {
-            bodyClasses += ' safari';
+        const ie = ua.match(/(?:MSIE |Trident\/.*?rv:)(\d+)/i);
+        if (ie) {
+            classes.push('ie');
+            if (ie[1] === '11') classes.push('ie11');
+        } else if (/\bEdg(?:e|A|iOS)?\//i.test(ua)) {
+            classes.push('edge');
+        } else if (/CriOS\//i.test(ua) || (/Chrome\//i.test(ua) && /Google Inc/i.test(navigator.vendor))) {
+            classes.push('chrome');
+        } else if (/(?:Firefox|FxiOS)\//i.test(ua)) {
+            classes.push('firefox');
+        } else if (/Version\/[\d.]+.*Safari\//i.test(ua)) {
+            classes.push('safari');
         }
 
-        return bodyClasses;
+        return classes.join(' ');
     });
 });
 
